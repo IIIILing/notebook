@@ -47,6 +47,8 @@ nav:
     - cs61a: csdiy/cs61a.md
     - missing semester: csdiy/missing-semester.md
   - Tool:
+    - Makdocs:
+      - 在linux里配置mkdocs和material: tool/Mkdocs/mkdocs-record.md
     - Git教程: 
       - 进阶使用: tool/git/进阶使用.md
       - 如何在本地管理多个github账号: tool/git/设置多个账号.md
@@ -68,13 +70,12 @@ nav:
     - 离散数学: zju-course/离散数学.md
     - 线代: zju-course/线代/线代.md
   - CS-Notes:
-    - Go: CS-Notes/go.md
+    - Go: CS-Notes/go/go.md
     - HTML: CS-Notes/HTML.md
     - CSS: CS-Notes/CSS.md
     - JavaScript: CS-Notes/JavaScript.md
     - React: CS-Notes/React.md
     - C: CS-Notes/C.md
-    - python: CS-Notes/python.md
   - 关于我: 
     - 作者个人简介: about.md
   - todolist: todolist/todolist.md
