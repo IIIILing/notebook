@@ -1,0 +1,2445 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../../csdiy/cs61a/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
+    
+    
+      
+        <title>leetcode题解1-10 - JimmyEastBrook'NoteBook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.76a95c52.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=lxgw-wenkai:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"lxgw-wenkai";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/link.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/customize.css">
+    
+      <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config",""),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#leetcode" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="JimmyEastBrook&#39;NoteBook" class="md-header__button md-logo" aria-label="JimmyEastBrook'NoteBook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JimmyEastBrook'NoteBook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              leetcode题解1-10
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="关闭自动模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="关闭自动模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  NoteBook介绍
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  leetcode
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../csdiy/cs61a/" class="md-tabs__link">
+          
+  
+  csdiy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tool/git/%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8/" class="md-tabs__link">
+          
+  
+  Tool
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zju-course/%E5%85%B3%E4%BA%8E%E6%9C%AC%E6%A0%8F/" class="md-tabs__link">
+          
+  
+  zju-course
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../CS-Notes/go.md" class="md-tabs__link">
+          
+  
+  CS-Notes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../about/" class="md-tabs__link">
+          
+  
+  关于我
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../todolist/todolist/" class="md-tabs__link">
+        
+  
+    
+  
+  todolist
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tag/" class="md-tabs__link">
+        
+  
+    
+  
+  tags
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="JimmyEastBrook&#39;NoteBook" class="md-nav__button md-logo" aria-label="JimmyEastBrook'NoteBook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    JimmyEastBrook'NoteBook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NoteBook介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    leetcode
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            leetcode
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    leetcode题解1-10
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    leetcode题解1-10
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode 3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LeetCode 3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目描述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      解题思路
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LeetCode 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      链表的知识点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="链表的知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      可变数组
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      -&gt;
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      可变数组的缺陷
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      链表的遍历
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      链表的删除
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      链表的插入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      链表的合并
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      链表的反转
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      最优题解
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      LeetCode 9
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leetcode698" class="md-nav__link">
+    <span class="md-ellipsis">
+      leetcode698（每日一题）回溯算法/动态规划
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    csdiy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            csdiy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../csdiy/cs61a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cs61a
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../csdiy/missing-semester/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    missing semester
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tool
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tool
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git教程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Git教程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool/git/%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    进阶使用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool/git/%E8%AE%BE%E7%BD%AE%E5%A4%9A%E4%B8%AA%E8%B4%A6%E5%8F%B7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何在本地管理多个github账号
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool/markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool/latex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    latex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool/typst/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    typst
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    zju-course
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            zju-course
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zju-course/%E5%85%B3%E4%BA%8E%E6%9C%AC%E6%A0%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于本栏
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zju-course/%E5%BD%A2%E7%AD%96/%E5%BD%A2%E7%AD%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    形策
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zju-course/%E4%B8%9D%E7%BB%B8%E4%B9%8B%E8%B7%AF%E8%89%BA%E6%9C%AF/%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    丝绸之路艺术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zju-course/vjf/vjf1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    vjf1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zju-course/vjf/vjf2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    vjf2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zju-course/%E5%A4%A7%E7%89%A9%E7%94%B2/%E5%A4%A7%E7%89%A9%E7%94%B2%EF%BC%88%E4%B8%8A%EF%BC%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    大物甲（上）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zju-course/%E5%A4%A7%E7%89%A9%E7%94%B2/%E5%A4%A7%E7%89%A9%E7%94%B2%EF%BC%88%E4%B8%8B%EF%BC%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    大物甲（下）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    马原
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            马原
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zju-course/%E9%A9%AC%E5%8E%9F/%E9%A9%AC%E5%8E%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    马原知识回顾
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zju-course/%E9%A9%AC%E5%8E%9F/%E9%A2%98%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    考点和套路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zju-course/%E5%86%9B%E4%BA%8B%E7%90%86%E8%AE%BA/%E5%86%9B%E4%BA%8B%E7%90%86%E8%AE%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    军事理论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zju-course/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    离散数学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../zju-course/%E7%BA%BF%E4%BB%A3/%E7%BA%BF%E4%BB%A3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    线代
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CS-Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            CS-Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS-Notes/go.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS-Notes/HTML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS-Notes/CSS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS-Notes/JavaScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS-Notes/React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS-Notes/C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS-Notes/python.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    关于我
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            关于我
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    作者个人简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../todolist/todolist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    todolist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tag/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="leetcode">leetcode题解不完全分享<a class="headerlink" href="#leetcode" title="Permanent link">&para;</a></h1>
+<p>一杯酒，一包烟，一道leetcode写一天</p>
+<h2 id="leetcode-3">LeetCode 3<a class="headerlink" href="#leetcode-3" title="Permanent link">&para;</a></h2>
+<h3 id="_1">题目描述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>给定一个字符串 s ，请你找出其中不含有重复字符的 最长 
+子串的长度。</p>
+<p>示例 1:</p>
+<p>输入: s = "abcabcbb"</p>
+<p>输出: 3</p>
+<p>解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。</p>
+<p>示例 2:</p>
+<p>输入: s = "bbbbb"</p>
+<p>输出: 1</p>
+<p>解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。</p>
+<p>示例 3:</p>
+<p>输入: s = "pwwkew"</p>
+<p>输出: 3</p>
+<p>解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。</p>
+<p>请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。</p>
+</blockquote>
+<h3 id="_2">解题思路<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>创建一个ASCII字符集大小的数组，用于存储字符最后出现的位置。</li>
+<li>使用两个指针，start 和 end</li>
+<li>刚开始的时候，start 和 end 都指向字符串的开始位置。</li>
+<li>使用 end 指针遍历字符串，同时将遇到的字符及其索引存入ascii数组中。</li>
+<li>如果ascii数组中已经存在当前 end 指针指向的字符，则需要移动 start 指针，直到该字符被移出，此时，得到了两个重复字符之间的数组大小</li>
+<li>在每一步，更新最长无重复字符子串的长度，该长度等于 end - start + 1。</li>
+<li>如果出现重复的情况，在while中更新start指针的位置，直到没有重复的字符。（此时相当于是重置了start和end指针的位置，使得长度重新归0）</li>
+<li>最后用max函数返回最长无重复字符子串的长度。</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">lengthOfLongestSubstring</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">maxLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 窗口的起始位置</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">charIndex</span><span class="p">[</span><span class="mi">128</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"> </span><span class="c1">// 假设ASCII字符集，用于存储字符最后出现的位置</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">end</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">;</span><span class="w"> </span><span class="n">end</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="c1">// 如果字符已存在，移动start指针到重复字符的下一个位置</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">charIndex</span><span class="p">[(</span><span class="kt">int</span><span class="p">)</span><span class="n">s</span><span class="p">[</span><span class="n">end</span><span class="p">]]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">            </span><span class="n">charIndex</span><span class="p">[(</span><span class="kt">int</span><span class="p">)</span><span class="n">s</span><span class="p">[</span><span class="n">start</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 从哈希表中删除start指针的字符</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">            </span><span class="n">start</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="c1">// 更新字符的索引</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="n">charIndex</span><span class="p">[(</span><span class="kt">int</span><span class="p">)</span><span class="n">s</span><span class="p">[</span><span class="n">end</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 记录字符最后出现的位置</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="c1">// 更新最长子串的长度</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="n">maxLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">maxLength</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">maxLength</span><span class="p">;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="p">}</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="kt">int</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="leetcode-2">LeetCode 2<a class="headerlink" href="#leetcode-2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">链表的知识点<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>来自翁凯的mooc，C语言程序进阶</p>
+<h4 id="_4">可变数组<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>数组是无法改变大小的，传统方法是搞一个大的数组，现在考虑说自己用C实现一个可以改变大小的数组</p>
+<p>要有几个特点：</p>
+<ol>
+<li>可以长大</li>
+<li>有一个办法知道现在有多大（之前可以用sizeof(),但是现在不行了）</li>
+<li>可以访问其中的单元</li>
+</ol>
+<p>可以实现一个函数库，定义一些函数，这些函数提供可以自动改变大小的数组</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">array</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">}</span><span class="n">Array</span><span class="p">;</span><span class="c1">//定义array结构体</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">Array</span><span class="w"> </span><span class="nf">array_create</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">init_size</span><span class="p">){</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="n">Array</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">init_size</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="n">a</span><span class="p">.</span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">);</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="kt">void</span><span class="w"> </span><span class="nf">array_free</span><span class="p">(</span><span class="n">Array</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">){</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">);</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="n">a</span><span class="o">-&gt;</span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="n">a</span><span class="o">-&gt;</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="p">}</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="kt">int</span><span class="w"> </span><span class="nf">array_size</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Array</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">){</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span><span class="c1">//调用size</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="p">}</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="nf">array_at</span><span class="p">(</span><span class="n">Array</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">){</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">[</span><span class="n">index</span><span class="p">];</span><span class="c1">//直接调用index位置的元素</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="p">}</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="kt">void</span><span class="w"> </span><span class="nf">array_inflate</span><span class="p">(</span><span class="n">Array</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">more_size</span><span class="p">){</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">size</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">more_size</span><span class="p">));</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">    </span><span class="c1">//重新申请一个更大的数组，将原来的数组拷贝到新的数组中</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">inti</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">    </span><span class="c1">//for循环拷贝数组</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">);</span><span class="c1">//释放原来的数组</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">    </span><span class="n">a</span><span class="o">-&gt;</span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="c1">//将新的数组赋给a-&gt;array,把新地址赋值给a-&gt;array这个指针</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">    </span><span class="n">a</span><span class="o">-&gt;</span><span class="n">size</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">more_size</span><span class="p">;</span><span class="c1">//更新size</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="-"><code>-&gt;</code><a class="headerlink" href="#-" title="Permanent link">&para;</a></h4>
+<p>在C语言中，<code>a-&gt;array</code> 表示通过指向结构体的指针 <code>a</code> 访问该结构体中的成员 <code>array</code>。</p>
+<p><strong>具体解释</strong> ：</p>
+<ol>
+<li>
+<p><strong><code>a</code> 是指针</strong>：这里的 <code>a</code> 是一个指向某个结构体的指针。</p>
+</li>
+<li>
+<p><strong><code>-&gt;</code> 是成员访问运算符</strong>：<code>-&gt;</code> 运算符用于通过指针访问结构体或联合体中的成员。它等价于 <code>(*a).array</code>，只是 <code>-&gt;</code> 更加简洁。</p>
+</li>
+<li>
+<p><strong><code>array</code> 是结构体的成员</strong>：<code>array</code> 是该结构体中的一个成员，可能是数组、指针、或者其他类型的变量。</p>
+</li>
+</ol>
+<h3 id="_5">示例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>假设有以下结构体定义：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Example</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">array</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<p>然后定义一个结构体指针并进行操作：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Example</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">}};</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Example</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">example</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>在这种情况下，<code>a-&gt;array</code> 将访问 <code>example</code> 结构体中的 <code>array</code> 成员，即一个整型数组。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="o">-&gt;</span><span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"> </span><span class="c1">// 输出: 0</span>
+</code></pre></div></td></tr></table></div>
+<p>以上代码中，<code>a-&gt;array[0]</code> 表示访问 <code>array</code> 数组的第一个元素。</p>
+<h3 id="_6">可变数组的缺陷<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>每一次长大的时候都要申请一块新的内存空间，问题是拷贝要花时间，花内存。</p>
+<p>可能出现一种情况，明明有更大的内存但是没有足够的空间了</p>
+<p>可以采用linked block的方法，每次申请一个block，每个block有一个指针指向下一个block，这样就可以做到让一个数组指向下一个数组，再不够了再指向下一个数组，这样就可以实现一个无限长的数组。<strong>不断生长</strong></p>
+<p>可以有这么一个东西，一部分是数据，另外一部分是指针，指针可以指向下一个同样的东西，下一个还是一个数据，一个指针（指向下一个）最后一个只一个结尾标志，没有下一个了</p>
+<p>还有一个头，带着数据和指针的是节点，这就是linkedlist 链表</p>
+<p>一般会这样定义</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span><span class="c1">//下一个指向自己这样变量的指针，当然这个时候还不知道什么是node，但是知道什么是struct node，所以不能直接下node *next，应该是struct Node *next</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">}</span><span class="n">Node</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>这样定义了一个节点，里面有数据和指针，指针指向下一个节点，最后一个节点的指针指向NULL，表示结束。</p>
+<p>写一个程序去写入一个链表</p>
+<p>读一个num，直到输入是-1未知</p>
+<p>因为未知多少个数要处理，所以可以用链表</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span>
+<span class="normal"><a href="#__codelineno-6-28">28</a></span>
+<span class="normal"><a href="#__codelineno-6-29">29</a></span>
+<span class="normal"><a href="#__codelineno-6-30">30</a></span>
+<span class="normal"><a href="#__codelineno-6-31">31</a></span>
+<span class="normal"><a href="#__codelineno-6-32">32</a></span>
+<span class="normal"><a href="#__codelineno-6-33">33</a></span>
+<span class="normal"><a href="#__codelineno-6-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">}</span><span class="w"> </span><span class="n">Node</span><span class="p">;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">EOF</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">            </span><span class="c1">//add to linked list,一开始整个linkedlist也是空的，需要add到linkedlist中</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">            </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">Node</span><span class="p">));</span><span class="c1">//申请一个新的节点</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">            </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="c1">//赋值</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">            </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="c1">//最后一个节点的指针指向NULL</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">            </span><span class="c1">//找到最后那个节点，然后把新的节点加到最后一个节点的后面</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">            </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">last</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span><span class="c1">//从头开始找</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">last</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="c1">//如果头是空的，那么新的节点就是头</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">                </span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="c1">//第一个节点，直接让head指向新节点</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">last</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="c1">//找到最后一个节点</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="w">                    </span><span class="n">last</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">last</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span><span class="c1">//找到最后一个节点，最后一个节点的指针指向NULL</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="w">                </span><span class="n">last</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="c1">//最后一个节点的指针指向新的节点</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>这样就可以实现一个可变数组，但是链表的优势在于可以动态的增加元素，而且不需要申请新的内存空间，所以更加高效。</p>
+<p>我们可以以此声明一个函数，用于向链表中添加元素：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">**</span><span class="n">head</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="c1">//传入head的指针的指针</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">Node</span><span class="p">));</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">last</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">last</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">        </span><span class="o">*</span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">last</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">            </span><span class="n">last</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">last</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">        </span><span class="n">last</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">head</span><span class="p">;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>这样就可以在主函数中调用 <code>add</code> 函数，向链表中添加元素：</p>
+<h3 id="_7">链表的遍历<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>输出一下所有的节点</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">print_list</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">head</span><span class="p">;</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>这样就可以遍历整个链表，输出所有的值。</p>
+<h3 id="_8">链表的删除<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>删除某个节点，可以用下面的函数：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">**</span><span class="n">head</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="p">;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">value</span><span class="o">!=</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">        </span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">        </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">prev</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">            </span><span class="o">*</span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">            </span><span class="n">prev</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">        </span><span class="n">free</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>这个函数的作用是删除链表中值为 <code>value</code> 的节点，首先找到这个节点，然后把它的前一个节点的 <code>next</code> 指针指向它的下一个节点，然后释放这个节点的内存。</p>
+<p>这样就可以删除链表中的某个节点。</p>
+<h3 id="_9">链表的插入<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>插入一个节点，可以用下面的函数：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span>
+<span class="normal"><a href="#__codelineno-10-22">22</a></span>
+<span class="normal"><a href="#__codelineno-10-23">23</a></span>
+<span class="normal"><a href="#__codelineno-10-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">**</span><span class="n">head</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">Node</span><span class="p">));</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">        </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="p">;</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">        </span><span class="o">*</span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">        </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">        </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">curr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="p">;</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">curr</span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">            </span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curr</span><span class="p">;</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">            </span><span class="n">curr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">            </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">curr</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Index out of range</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">            </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curr</span><span class="p">;</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="w">            </span><span class="n">prev</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>这个函数的作用是插入一个值为 <code>value</code> 的节点到链表的第 <code>index</code> 个位置，首先申请一个新的节点，然后判断 <code>index</code> 是否为 0，如果是，那么把新的节点的 <code>next</code> 指针指向原来的头节点，然后把新的节点作为头节点，否则，需要找到第 <code>index</code> 个位置的节点，然后把新的节点插入到这个位置的前面。</p>
+<p>这样就可以在链表的任意位置插入一个节点。</p>
+<h3 id="_10">链表的合并<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>合并两个链表，可以用下面的函数：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">merge</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">**</span><span class="n">head1</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">**</span><span class="n">head2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">head1</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">head2</span><span class="p">;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">prev1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">prev2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">p2</span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">p2</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">            </span><span class="n">prev1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p1</span><span class="p">;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">            </span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">            </span><span class="n">prev2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p2</span><span class="p">;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">            </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p2</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">        </span><span class="n">prev2</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p2</span><span class="p">;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">        </span><span class="n">prev1</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p1</span><span class="p">;</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">    </span><span class="o">*</span><span class="n">head1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">head2</span><span class="p">;</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>这个函数的作用是合并两个链表，首先找到两个链表的头节点，然后比较两个链表的第一个节点的值，把小的节点插入到大的节点的后面，直到两个链表的头节点有一个为空，然后把另一个链表的剩余节点插入到第一个链表的最后一个节点的后面，最后把第二个链表的头节点指向第一个链表的头节点，这样就合并了两个链表。</p>
+<p>这样就可以合并两个链表。</p>
+<h3 id="_11">链表的反转<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>反转链表，可以用下面的函数：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">reverse</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">**</span><span class="n">head</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="p">;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">        </span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">        </span><span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prev</span><span class="p">;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">        </span><span class="n">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">        </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">    </span><span class="o">*</span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prev</span><span class="p">;</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>这个函数的作用是反转链表，首先找到链表的头节点，然后把它的 <code>next</code> 指针指向前一个节点，然后把当前节点指向前一个节点，直到链表的头节点为空，然后把链表的头节点指向最后一个节点，这样就反转了链表。</p>
+<p>这样就可以反转链表。</p>
+<h3 id="_12">最优题解<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span>
+<span class="normal"><a href="#__codelineno-13-25">25</a></span>
+<span class="normal"><a href="#__codelineno-13-26">26</a></span>
+<span class="normal"><a href="#__codelineno-13-27">27</a></span>
+<span class="normal"><a href="#__codelineno-13-28">28</a></span>
+<span class="normal"><a href="#__codelineno-13-29">29</a></span>
+<span class="normal"><a href="#__codelineno-13-30">30</a></span>
+<span class="normal"><a href="#__codelineno-13-31">31</a></span>
+<span class="normal"><a href="#__codelineno-13-32">32</a></span>
+<span class="normal"><a href="#__codelineno-13-33">33</a></span>
+<span class="normal"><a href="#__codelineno-13-34">34</a></span>
+<span class="normal"><a href="#__codelineno-13-35">35</a></span>
+<span class="normal"><a href="#__codelineno-13-36">36</a></span>
+<span class="normal"><a href="#__codelineno-13-37">37</a></span>
+<span class="normal"><a href="#__codelineno-13-38">38</a></span>
+<span class="normal"><a href="#__codelineno-13-39">39</a></span>
+<span class="normal"><a href="#__codelineno-13-40">40</a></span>
+<span class="normal"><a href="#__codelineno-13-41">41</a></span>
+<span class="normal"><a href="#__codelineno-13-42">42</a></span>
+<span class="normal"><a href="#__codelineno-13-43">43</a></span>
+<span class="normal"><a href="#__codelineno-13-44">44</a></span>
+<span class="normal"><a href="#__codelineno-13-45">45</a></span>
+<span class="normal"><a href="#__codelineno-13-46">46</a></span>
+<span class="normal"><a href="#__codelineno-13-47">47</a></span>
+<span class="normal"><a href="#__codelineno-13-48">48</a></span>
+<span class="normal"><a href="#__codelineno-13-49">49</a></span>
+<span class="normal"><a href="#__codelineno-13-50">50</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="cm">/**</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="cm"> * Definition for singly-linked list.</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="cm"> * struct ListNode {</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="cm"> *     int val;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="cm"> *     struct ListNode *next;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="cm"> * };</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="cm"> */</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="o">*</span><span class="w"> </span><span class="n">addTwoNumbers</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="o">*</span><span class="w"> </span><span class="n">l1</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="o">*</span><span class="w"> </span><span class="n">l2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="w"> </span><span class="o">*</span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="c1">//声明head和tail两个指针，表示头和尾</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="c1">//定义carry，表示进位</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">l1</span><span class="o">||</span><span class="n">l2</span><span class="p">)</span><span class="c1">//当两个存在null（任意一个到结尾的之前）</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l1</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">l1</span><span class="o">-&gt;</span><span class="n">val</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="c1">//如果存在li-&gt;val,就用li-&gt;val，否则就是0</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l2</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">l2</span><span class="o">-&gt;</span><span class="n">val</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">+</span><span class="n">carry</span><span class="p">;</span><span class="c1">//相加</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">head</span><span class="p">)</span><span class="c1">//如果head是第一个（后面没有节点）</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">            </span><span class="n">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="p">));</span><span class="c1">//此时head = tail，我们可以直接在null后面申请一块结构体</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">            </span><span class="n">tail</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="c1">//然后赋值</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">            </span><span class="n">tail</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="c1">//下一个指向null</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">        </span><span class="k">else</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="w">            </span><span class="n">tail</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="p">));</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25"></a><span class="w">            </span><span class="c1">//本来指向null现在不指向null，指向新的结构体</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26"></a><span class="w">            </span><span class="c1">//tail-&gt;next指向下一个指向新的结构体</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27"></a><span class="w">            </span><span class="n">tail</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="c1">//给新的结构体赋值</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28"></a><span class="w">            </span><span class="n">tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tail</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">next</span><span class="p">;</span><span class="c1">//链接到tail上</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29"></a><span class="w">            </span><span class="n">tail</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="n">然后把新的tail变成null</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31"></a><span class="w">        </span><span class="n">carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="c1">//统一在这里进位，避免重复</span>
+<a id="__codelineno-13-32" name="__codelineno-13-32"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span><span class="c1">//如果l1存在，l1指向下一个节点</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34"></a><span class="w">            </span><span class="n">l1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l1</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-13-35" name="__codelineno-13-35"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-36" name="__codelineno-13-36"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span><span class="c1">//如果l2存在，l2指向下一个节点</span>
+<a id="__codelineno-13-37" name="__codelineno-13-37"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-13-38" name="__codelineno-13-38"></a><span class="w">            </span><span class="n">l2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l2</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">next</span><span class="p">;</span>
+<a id="__codelineno-13-39" name="__codelineno-13-39"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-40" name="__codelineno-13-40"></a>
+<a id="__codelineno-13-41" name="__codelineno-13-41"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-42" name="__codelineno-13-42"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">carry</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="c1">//如果最后还有进位，就再申请一个节点</span>
+<a id="__codelineno-13-43" name="__codelineno-13-43"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-13-44" name="__codelineno-13-44"></a><span class="w">        </span><span class="n">tail</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">ListNode</span><span class="p">));</span>
+<a id="__codelineno-13-45" name="__codelineno-13-45"></a><span class="w">        </span><span class="n">tail</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">carry</span><span class="p">;</span>
+<a id="__codelineno-13-46" name="__codelineno-13-46"></a><span class="w">        </span><span class="n">tail</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-13-47" name="__codelineno-13-47"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-48" name="__codelineno-13-48"></a>
+<a id="__codelineno-13-49" name="__codelineno-13-49"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">head</span><span class="p">;</span><span class="c1">//返回头节点</span>
+<a id="__codelineno-13-50" name="__codelineno-13-50"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>这个题解是用链表实现的，思路是用两个指针，一个指向l1，一个指向l2，然后相加，如果有进位，就把进位加到下一个节点上，直到两个链表都到结尾，然后把最后的进位加到最后一个节点上。</p>
+<p><strong>链表的题目要多做</strong>。</p>
+<h2 id="leetcode-9">LeetCode 9<a class="headerlink" href="#leetcode-9" title="Permanent link">&para;</a></h2>
+<p>回文数，不用数组写，直接计算会优化过程</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kt">bool</span><span class="w"> </span><span class="nf">isPalindrome</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="c1">//判断是否为回文数</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="c1">//负数不会是回文数</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="c1">//存储x</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="c1">//用于储存x的反转数</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="c1">//取num的个位</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">        </span><span class="n">num</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="c1">//移除num的最后一个数字</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">        </span><span class="n">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">num1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">x</span><span class="p">){</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">    </span><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="leetcode698">leetcode698（每日一题）回溯算法/动态规划<a class="headerlink" href="#leetcode698" title="Permanent link">&para;</a></h2>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        此页面有帮助吗？
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9h4m4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H9m0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03V19Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12h-4M15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h9m0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97V5Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              谢谢你的反馈！
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "navigation.top", "navigation.bottom", "toc.integrate", "content.code.copy", "content.code.link", "content.code.highlight", "content.math", "search.full", "search.share", "navigation.tabs", "navigation.sections"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
