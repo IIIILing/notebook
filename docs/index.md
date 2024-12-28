@@ -1,45 +1,68 @@
 ---
-title: NoteBook'main page
-time: 2024-06-11 14:53:00
-author: JimmyEastBrook
-tags: 
-    - introduction
-
-hide:
-    - footer
-    - feedback  
-comments: true  #默认不开启评论
+title: Home Page
+time: 2024-12-18 14:53:00
+author: JimmyEastBrook 
+comments: true  
+statistics: True
 --- 
 # NoteBook简介
 
-JimmyEastBrook的笔记本。
+JimmyEastBrook的笔记本
 
-记录，学习，分享
+## Who am I
 
-## 为什么有这个
+- JimmyEastBrook,是Jimmy Butler和Russell Westbrook组合
 
-主要是自己水98的时候惊叹于CS专业丰富的学习资料，每一门课都有大量的资料，分布在每个人的个人blog和notebook中
+- 来自ZJU电气工程学院,23届本科生.
 
-甚至还有专门的zjucs-in-all这样的整合网站
+!!! 一些爱好
+    篮球,跑步,骑车,看电影,战地系列玩家,偶尔打打战雷
 
-所以自己做一个类似的网站吧。其实我自己也只是一个成绩普通的本科生，做这个的意义更在于每周复习知识
+<div class="grid cards" markdown>
 
-!!! tip something to say
-    世界上没有那么多天赋异禀，但是仍然有人在翻山越岭
+- :material-chart-bar:  [CS](CS/index.md)
+- :material-bookmark:  [EE](EE/index.md)
 
-## 更新日志
+</div>
 
-time|field|commit
-:-|-|:-
-24.6.11|Tool|更新markdown教程
-24.6.11|zju-course|更新vjf笔记
-24.6.12|Tool|更新本地git管理多个github账号
-24.6.13|zju-course|更新军事理论期末考点
-24.6.14|zju-course|更新马原，丝绸之路艺术复习考点
-24.6.16|zju-course|更新形策知识点（不完全版本）
-24.6.17|zju-course|更新大英，大物，微积分
+??? warning "更新计划"
 
-## material参考
+    1. 考前更新C语言理论考部分
 
-- [中文文档](https://mkdoc-material.llango.com/)
+    2. 电路和数电部分:假期更新,写一份类似savia的讲义
 
+    3. 德语:假期更新,还会更新关于德三帝国的一些历史和军事知识
+
+    4. 电路电子技术实验:考试结束后更新笔记和体验,不包含实验报告
+
+    5. 概统和大学物理:上传自己使用过的网页资料
+
+    6. 物实验:考前写一份考试注意事项的整理
+    ??? 学习计划
+        1. 假期学习模电,同步更新笔记
+
+        2. 练习焊接电路板
+
+        3. 学习python.更新自己笔记,为进组做准备
+
+        4. 重新做aduino的项目
+
+        5. 学习matlab
+
+        6. 学习typst
+
+        7. 学习编写shell脚本
+
+        8. 在虚拟机上安装`archlinux`
+
+!!! note "统计"
+    本站共有 {{ pages }} 个页面，{{ words }} 个字，{{ codes }} 行代码，{{ images }} 张图片。
+
+## 友链
+
+<div class="grid cards" markdown>
+
+- :material-link: [黎辉](https://lh-0124.github.io/)
+- :material-link: [Slowist](https://slowist-lee.github.io/notebook/)
+
+</div>
