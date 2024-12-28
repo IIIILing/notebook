@@ -2,6 +2,7 @@
 title: Markdown基础用法
 description: Markdown is a lightweight markup language with plain text formatting syntax.
 Date: 2024-06-11
+statistics: True
 ---
 
 # Markdown 语法学习 精简版[转载]

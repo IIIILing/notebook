@@ -64,5 +64,7 @@ JimmyEastBrook的笔记本
 
 - :material-link: [黎辉](https://lh-0124.github.io/)
 - :material-link: [Slowist](https://slowist-lee.github.io/notebook/)
+- :material-link: [Jyyyyz](https://hhhjyz.github.io/)
+- :material-link: [George_C](https://georgec6.github.io/Notes/)
 
 </div>

@@ -1,5 +1,7 @@
-# 记录一下自己在LINUX上配置MKDOCS和MATERIAL的过程
-
+---
+title: 记录一下自己在LINUX上配置MKDOCS和MATERIAL的过程
+statistics: True
+---
 ## 安装MKDOCS
 
 先克隆仓库，然后想要MKDOCS SERVE发现没有MKDOCS
