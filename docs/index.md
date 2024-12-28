@@ -63,8 +63,28 @@ JimmyEastBrook的笔记本
 <div class="grid cards" markdown>
 
 - :material-link: [黎辉](https://lh-0124.github.io/)
+
+    是学习版主''(*≧▽≦*)''
+
 - :material-link: [Slowist](https://slowist-lee.github.io/notebook/)
+
+    是lxjj!''(⊙o⊙)''
+
 - :material-link: [Jyyyyz](https://hhhjyz.github.io/)
+
+    笨蛋降耗`(*>﹏<*)′
+
 - :material-link: [George_C](https://georgec6.github.io/Notes/)
 
+    是乔治`(*￣▽￣*)'
+
+- :material-link: [ZJU CS - All Sum in One!](https://github.com/IsshikiHugh/zju-cs-asio)
+
+    EEer羡慕了!/(ㄒoㄒ)/~~
+
+- :material-link: [ZJU-EEStudy](https://zju-eesuad.github.io/EEStUdy-Place/)
+
+    对于复习补天言之无物,开课之前尚可一读
+
 </div>
+
