@@ -1,0 +1,228 @@
+site_name: Notebook
+
+theme:
+  name: material
+  font: false 
+  custom_dir: material/overrides #主要是这一行，指定了主题的配置文件夹
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default # 日间模式
+      primary: blue grey  # 上方的
+      accent: blue grey # 链接等可交互元件的高亮色
+      # teal
+      toggle:
+        icon: material/toggle-switch # 图标
+        name: 切换至夜间模式 # 鼠标悬浮提示
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate # 夜间模式
+      primary: black
+      accent: blue # 链接等可交互元件的高亮色
+      # teal
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: 切换至夜间模式
+
+  features:
+    - search.suggest # 搜索输入一些字母时推荐补全整个单词
+    - navigation.instant  #即时加载
+    - navigation.tracking  #锚点跟踪
+    - navigation.tabs  #导航选项卡
+    - navigation.tabs.sticky  #粘性导航选项卡
+    - navigation.sections  #次级目录在侧边栏中呈现为组，与tabs同存则有2级导航
+#    - navigation.expand  #左侧边栏全展开，取消则折叠其他只展开当选
+    - navigation.indexes  #次级索引页，直接将文档附加到章节，提供概览页面，在相应文件夹中创建index.md添加到导航nav开头。不兼容toc.integrate。
+    - toc.follow   #锚跟随，文章小标题目录侧边栏自动滚动，以便活动锚点始终可见（付费功能）
+#    - toc.integrate  #导航集成，文章小标题目录是左侧边栏的一部分
+    - navigation.top  #返回顶端
+    - search.suggest  #搜索建议，省略回车
+    - search.highlight  #搜索词高亮突出显示
+    - search.share   #搜索共享
+    - header.autohide  #标题自动隐藏
+    - announce.dismiss  #标记为已读（付费功能）
+    - instant  #即时加载
+    - code-annotations  # (可选：支持代码注释)
+    - code-copy         # 启用一键复制代码功能
+extra:
+  generator: true #是否删除页脚显示“使用 MkDocs 材料制造”
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/iiiiling
+
+    # - icon: fontawesome/regular/envelope #联系方式图标
+    #   link: mailto:<wangkewen821@gmail.com> #邮件联系方式
+    # - icon: fontawesome/brands/bilibili
+    #   link: https://space.bilibili.com/1407028951?spm_id_from=333.1007.0.0
+  analytics:
+    provider: google #谷歌分析
+    property: G-T3ZB7872C5 # 跟踪ID，可自行修改
+
+  # cookies设置（可选）
+  # consent:
+  #   title: Cookie consent
+  #   description: >-
+  #     我们也使用cookies来识别您的重复访问和偏好来衡量我们文档的有效性以及用户是否找到他们要找的东西。
+  #     如果你同意,你可以帮助我们让我们的网站更好
+
+
+plugins:
+  - search #搜索配置
+  - statistics
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      enabled: true 
+      strict: false 
+
+  - tags:
+      tags_file: tag.md  #分类标签
+  - blog: #博客配置
+      post_date_format: full #时间
+      draft: true
+      draft_if_future_date: true #自动将具有未来日期的帖子标记为草稿
+      post_readtime: true
+      post_readtime_words_per_minute: 180 #计算帖子的阅读时间时读者每分钟预计阅读的字数
+      post_url_format: "{date}/{slug}"
+      categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      pagination_url_format: "page/{page}"
+      authors_file: "{blog}/.authors.yml" #作者信息
+
+markdown_extensions: #详见https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/ 和 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta # 支持Markdown文件上方自定义标题标签等
+  - pymdownx.caret
+  - pymdownx.betterem
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - md_in_html
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
+
+  - pymdownx.arithmatex: # latex支持
+      generic: true
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      linenums: true # 显示行号
+      # auto_title: true # 显示编程语言名称
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - markdown.extensions.toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      permalink: "\ue157"
+
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
+
+  - pymdownx.arithmatex: # latex支持
+      generic: true
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      linenums: true # 显示行号
+      auto_title: true # 显示编程语言名称
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  # - markdown.extensions.toc:
+  #     slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+  #     permalink: "\ue157"
+
+
+extra_javascript:
+
+  - javascripts/extra.js #自定义javascript
+  - assets/javascripts/katex.js
+  - javascripts/mathjax.js #Latex支持
+  - https://polyfill.io/v3/polyfill.min.js?features=es6 #Latex支持
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js #Latex支持
+  # - ckplayer/js/ckplayer.js #播放器配置
+  # - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js  #gitalk支持
+
+extra_css:
+  - stylesheets/extra.css
+  - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
+  - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+  - https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css # font-awesome表情支持
+
+
+nav: 
+  - HOME: 
+    - Notebook介绍:
+      - index.md 
+      - Todolist.md
+      - EE/main.md
+
+  - 外语学习:
+    - German: Language/Germany.md
+  - 计算机基础:
+    - CS/index.md
+    - 编程语言:
+      - C语言: 
+        - CS/C/结构体.md
+        - CS/C/字符串.md
+        - CS/C/文件.md
+        - 理论考错题: CS/C/error.md
+    - 工具:
+      - Markdown: Tool/markdown.md
+      - MkDocs: 
+        - 如何配置MkDocs: Tool/Mkdocs/build_record.md
+        - 内置markdown适用的css扩展 : Tool/Mkdocs/Material/css.md
+  - 电气专业基础课:
+    - EE/index.md
+    - 电路电子技术1:
+      - 数电: 
+        - 器件基础: EE/EE1/Digital/Devices/Digitalcircuit.md
+        - 逻辑基础: EE/EEl/Digital/Logic/Logic.md
+        - 基础逻辑电路: EE/EE1/Digital/Basiclogiccircuit/Basiclogiccircuit.md
+        - 基本组合电路: EE/EE1/Digital/Basiccombinationcircuit/Basiccombinationcircuit.md
+        - 时序逻辑电路: EE/EE1/Digital/Times/times.md
+        - 集成逻辑电路: EE/EE1/Digital/Integration/integration.md
+        - ROM/RAM: EE/EE1/Digital/ROM/ROM.md
+
+    - 电路电子技术2:
+      - 模电资料汇总: EE/Electricfundamental/Analogcircuit/Source.md
+    - 电路电子技术实验:
+      - 电路实验:
+        - EE/Experiment1/Currentcircuit.md
+      - 数电实验:
+        - EE/Experiment1/Digitalcircuit.md
+  - 狱中往事:
+    - History/Suzi.md
+    - History/Haike.md
+
+

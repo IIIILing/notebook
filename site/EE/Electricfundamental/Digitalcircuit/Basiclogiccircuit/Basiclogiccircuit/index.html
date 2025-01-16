@@ -1,0 +1,2634 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Logic/Logic/">
+      
+      
+        <link rel="next" href="../../Basiccombinationcircuit/Basiccombinationcircuit/">
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
+    
+    
+      
+        <title>基础逻辑电路 - Notebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.76a95c52.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../css/timeago.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css">
+    
+      <link rel="stylesheet" href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-T3ZB7872C5"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-T3ZB7872C5",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-T3ZB7872C5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#基础门电路" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Notebook" class="md-header__button md-logo" aria-label="Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Notebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              基础逻辑电路
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue-grey"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../.." class="md-tabs__link">
+          
+  
+    
+  
+  HOME
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../Language/Germany/" class="md-tabs__link">
+          
+  
+    
+  
+  外语学习
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../CS/" class="md-tabs__link">
+          
+  
+    
+  
+  计算机基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  电气专业基础课
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../History/Suzi/" class="md-tabs__link">
+          
+  
+    
+  
+  狱中往事
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Notebook" class="md-nav__button md-logo" aria-label="Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Notebook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HOME
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            HOME
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Notebook介绍
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Notebook介绍
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Todolist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TodoList
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../main/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    大二秋冬期末复习资料汇总
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    外语学习
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            外语学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Language/Germany/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    German
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../CS/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    计算机基础
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            计算机基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    编程语言
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            编程语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    C语言
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            C语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../CS/C/%E7%BB%93%E6%9E%84%E4%BD%93/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    结构体
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../CS/C/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    字符串
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../CS/C/%E6%96%87%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文件输入/输出
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../CS/C/error/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    理论考错题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    工具
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Tool/markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MkDocs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            MkDocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Tool/Mkdocs/mkdocs-record.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何配置MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Tool/Mkdocs/Material/css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    内置markdown适用的css扩展
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    电气专业基础课
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            电气专业基础课
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    电路电子技术1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            电路电子技术1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数电
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            数电
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Devices/Digitalcircuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    器件基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Logic/Logic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    逻辑基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    基础逻辑电路
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    基础逻辑电路
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#基础门电路" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础门电路
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础门电路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#集成门电路的一般特性" class="md-nav__link">
+    <span class="md-ellipsis">
+      集成门电路的一般特性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ttl集成逻辑门" class="md-nav__link">
+    <span class="md-ellipsis">
+      TTL集成逻辑门
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TTL集成逻辑门">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ttl与非门" class="md-nav__link">
+    <span class="md-ellipsis">
+      TTL与非门
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ttl电气特性" class="md-nav__link">
+    <span class="md-ellipsis">
+      TTL电气特性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ttl电路输出结构" class="md-nav__link">
+    <span class="md-ellipsis">
+      TTL电路输出结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmos集成逻辑门" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMOS集成逻辑门
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#锁存器和触发器" class="md-nav__link">
+    <span class="md-ellipsis">
+      锁存器和触发器
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#定时器" class="md-nav__link">
+    <span class="md-ellipsis">
+      定时器
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Basiccombinationcircuit/Basiccombinationcircuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本组合电路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Times/times/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    时序逻辑电路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Integration/integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    集成逻辑电路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PLD/PLD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    可编程器件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    电路电子技术2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            电路电子技术2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Analogcircuit/Source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    模电资料汇总
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    电路电子技术实验
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            电路电子技术实验
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_1" id="__nav_4_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    电路实验
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            电路实验
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Experiment1/Currentcircuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Currentcircuit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数电实验
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            数电实验
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Experiment1/Digitalcircuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digitalcircuit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    狱中往事
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            狱中往事
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../History/Suzi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    苏子语录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../History/Haike/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    海匼日记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#基础门电路" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础门电路
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础门电路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#集成门电路的一般特性" class="md-nav__link">
+    <span class="md-ellipsis">
+      集成门电路的一般特性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ttl集成逻辑门" class="md-nav__link">
+    <span class="md-ellipsis">
+      TTL集成逻辑门
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TTL集成逻辑门">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ttl与非门" class="md-nav__link">
+    <span class="md-ellipsis">
+      TTL与非门
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ttl电气特性" class="md-nav__link">
+    <span class="md-ellipsis">
+      TTL电气特性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ttl电路输出结构" class="md-nav__link">
+    <span class="md-ellipsis">
+      TTL电路输出结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmos集成逻辑门" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMOS集成逻辑门
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#锁存器和触发器" class="md-nav__link">
+    <span class="md-ellipsis">
+      锁存器和触发器
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#定时器" class="md-nav__link">
+    <span class="md-ellipsis">
+      定时器
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>基础逻辑电路</h1>
+
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 3897 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 70 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 13 分钟</p>
+</div>
+<h2 id="基础门电路">基础门电路<a class="headerlink" href="#基础门电路" title="Permanent link"></a></h2>
+<h3 id="集成门电路的一般特性">集成门电路的一般特性<a class="headerlink" href="#集成门电路的一般特性" title="Permanent link"></a></h3>
+<ol>
+<li>逻辑电平和噪声容限</li>
+</ol>
+<p>在数字电路中，通常由多级门电路连接而成。显然，接收方（负载门）需要能正确识别发送方（驱动门）传递的逻辑信号.
+<img alt="alt text" src="../image.png" /></p>
+<p>考虑到元件参数的离散性，即数字器件由不同厂家生产，要求数字器件的输入电平、输出电平都必须遵循一定的电平规范</p>
+<details class="note">
+<summary>TTL电平规范</summary>
+<p><img alt="alt text" src="../image-1.png" /></p>
+</details>
+<p>噪声容限图解:</p>
+<p><img alt="alt text" src="../image-2.png" width="50%" /></p>
+<h2 id="ttl集成逻辑门">TTL集成逻辑门<a class="headerlink" href="#ttl集成逻辑门" title="Permanent link"></a></h2>
+<blockquote>
+<p>TTL与非门,CMOS非门,与非门,或非门的内部电路只需一般了解即可.所以这里以简单列举为主</p>
+</blockquote>
+<h3 id="ttl与非门">TTL与非门<a class="headerlink" href="#ttl与非门" title="Permanent link"></a></h3>
+<p><img alt="alt text" src="../image-3.png" width="50%" /></p>
+<ol>
+<li>多发射极管T1为输入级，实现与逻辑.与的功能在AB处实现,是一个并联结构.</li>
+<li>T2是中间级,提供两个相反的驱动信号</li>
+<li>T4T5输出</li>
+</ol>
+<p><strong>低电平时</strong>:<span class="arithmatex">\(V_i=0.3v\)</span>,T1饱和,T2T4截止TTL关门,T4导通,输出高电平,约3.6v</p>
+<p><strong>高电平时</strong>:<span class="arithmatex">\(V_i=3.6V\)</span>,T1倒置,T2T5饱和.T4截止,输出是低电平,约0.3v</p>
+<hr />
+<p>改进:</p>
+<p><img alt="alt text" src="../image-4.png" width="50%" /></p>
+<hr />
+<p><strong>传输特性</strong>:</p>
+<p>其中有三个传输特性:关门电压.开门电压,阈值电压</p>
+<p><img alt="alt text" src="../image-5.png" width="50%" /></p>
+<blockquote>
+<p>阈值电平VT:开门电平与关门电平十分接近,两个电平的中间值称为阈值电平.</p>
+</blockquote>
+<hr />
+<h2 id="ttl电气特性">TTL电气特性<a class="headerlink" href="#ttl电气特性" title="Permanent link"></a></h2>
+<p><strong>输入端</strong>:</p>
+<ul>
+<li>TTL电路输入端悬空相当于接高电平</li>
+<li>接小阻值电阻相当于接“低电平”</li>
+<li>TTL门输入端接大阻值电阻相当于接“高电平”</li>
+</ul>
+<details class="note">
+<summary>例题</summary>
+<p><img alt="alt text" src="../image-10.png" width="50%" /></p>
+</details>
+<p><a href="https://blog.csdn.net/qq_43284098/article/details/107055582">对电路符号感到疑惑可以看看这个</a></p>
+<hr />
+<p><strong>输出端</strong>:</p>
+<p><em>扇出系数</em>: 一个门电路的输出可以连多个门电路的输入。允许连接的负载门个数称为一个门的扇出系数.衡量的是门电路带负载能力的重要指标</p>
+<blockquote>
+<p>门电路相连时，不仅要考虑电压需符合电平规范，还需要考虑负载电流的影响，即输出端负载特性</p>
+</blockquote>
+<p><img alt="alt text" src="../image-6.png" width="50%" /></p>
+<hr />
+<p>负载特性分为<strong>输出高电平</strong>和<strong>输出低电平</strong>两种情况</p>
+<p><strong>输出低电平</strong>:</p>
+<p>当驱动门输出低电平时，电流是是从负载门流向驱动门,此时叫做<em>灌入</em>,这种负载成为灌电流负载</p>
+<p><img alt="alt text" src="../image-7.png" width="50%" /></p>
+<p>当负载门个数增加时，负载电流IOL增加，驱动门的输出电平将增大</p>
+<p>当低电平输出增大到VOL(max)所对应的负载电流,即为该门电路灌入时的最大负载电流IOL(max)</p>
+<p>第电平输出时允许的带负载门的最大个数，即低电平扇出系数</p>
+<p><strong>输出高电平</strong>:</p>
+<p>当驱动门输出高电平时,电流是从驱动门流出,并注入到负载门的输入端,为拉电流负载</p>
+<p><img alt="alt text" src="../image-8.png" width="50%" /></p>
+<p>当负载门个数增加时，负载电流IOH增加，驱动门的输出电平将减小</p>
+<details class="note">
+<summary>例题</summary>
+<p><img alt="alt text" src="../image-11.png" width="50%" /></p>
+</details>
+<p>TTL门电路的低电平灌电流远大于高电平拉电流.即：IOL&gt;&gt;IOH,所以扇出系数一般指的是低电平灌入的系数</p>
+<p>传输延迟时间tpd:半导体器件内部存在分布电容,器件从截止状态到完全导通，或者从导通到截止状态，都需要时间.一般为几十纳秒</p>
+<p><img alt="alt text" src="../image-12.png" width="50%" /></p>
+<hr />
+<h2 id="ttl电路输出结构">TTL电路输出结构<a class="headerlink" href="#ttl电路输出结构" title="Permanent link"></a></h2>
+<p>一般有三种输出结构:</p>
+<ul>
+<li>推拉式</li>
+<li>集电极开路</li>
+<li>三态</li>
+</ul>
+<hr />
+<p><strong>推拉式结构</strong>:</p>
+<p>前面的TTL与非门就是典型的推拉式结构</p>
+<p>输出的两个晶体管总是互补式的工作,通常来说多个门电路的输出端不能并联</p>
+<p><img alt="alt text" src="../image-13.png" width="50%" /></p>
+<hr />
+<p><strong>集电极开路结构</strong>:OC门是典型代表</p>
+<p><img alt="alt text" src="../image-14.png" /></p>
+<p>省去T6和T4，集电极悬空，必须外接电阻(称为上拉电阻).<strong>输出高电平为VCC1</strong>,而不是3.6V</p>
+<p>OC门符号:
+<img alt="alt text" src="../image-15.png" /></p>
+<p>虽然也是表示与非,但是有不同的特点:</p>
+<ol>
+<li>实现线与:多个OC门的输出端可直接相连,称为线与
+    <img alt="alt text" src="../image-16.png" /></li>
+<li>
+<p>实现逻辑电平转换:OC门外接电源VCC1可以与门电路电源VCC一致,也可不同.当VCC1不同于VCC时,则输出高电平值得以改变,从而实现逻辑电平的转换</p>
+</li>
+<li>
+<p>提高抗干扰能力:外接电源VCC1可以高于门电路电源VCC,使输出高电平提高,从而使高电平噪声容限增大</p>
+</li>
+<li>
+<p>实现电平指示:外接上拉电阻支路中串联发光二极管,则可作为电平指示</p>
+</li>
+</ol>
+<hr />
+<p><strong>三态输出结构</strong>:三态门</p>
+<blockquote>
+<p>三态输出是指除0、1两种状态外，还有高阻态
+输出高阻态时，相当于输出端与该门电路的内部连接处于断开状态</p>
+</blockquote>
+<p>EN=1的时候,也就是<span class="arithmatex">\(\overline{EN}=0\)</span>,D1,D2截止,A和\overline{L}实现了反相输出</p>
+<p>EN=0的时候,也就是<span class="arithmatex">\(\overline{EN}=1\)</span>,<span class="arithmatex">\(D_1\)</span>导电,但是T4T5截止,输出相当于悬空为高阻态</p>
+<p><img alt="alt text" src="../image-18.png" width="50%" /></p>
+<p><img alt="alt text" src="../image-17.png" width="50%" /></p>
+<p>实际应用时,三态门有多种形式.既可以是低电平使能,也可以是高电平使能;既有非门的三态门,也有其它逻辑（如与非门）的三态门,因此其电路符号也相应地有多种形式</p>
+<p><img alt="alt text" src="../image-19.png" /></p>
+<p>注意<strong>写EN</strong>都是<strong>输入高电平使能</strong>,写<strong><span class="arithmatex">\(\overline{EN}\)</span></strong>表示输入<strong>低电平使能</strong></p>
+<p>反映的是输入的电平</p>
+<p><img alt="alt text" src="../image-20.png" witdh="50%" /></p>
+<details class="note 例题">
+<summary>Note</summary>
+<p><img alt="alt text" src="../image-21.png" /></p>
+</details>
+<hr />
+<h2 id="cmos集成逻辑门">CMOS集成逻辑门<a class="headerlink" href="#cmos集成逻辑门" title="Permanent link"></a></h2>
+<p>CMOS门电路是用NMOS和 PMOS组成的互补型MOS电路。它在集成度、功耗、输出高低电平等方面，都比TTL优越，是目前集成电路的主流产品</p>
+<blockquote>
+<p>CMOS电路，使用时绝对不允许输入端悬空</p>
+</blockquote>
+<hr />
+<p><strong>CMOS非门</strong>:反相器,由增强型MOS管构成</p>
+<p><img alt="alt text" src="../image-22.png" width="50%" /></p>
+<p>下面那个接地,上面接高电压</p>
+<p>其中<span class="arithmatex">\(V1\)</span>是输入，<span class="arithmatex">\(V_2\)</span>是输出。设<span class="arithmatex">\(V_{DD}&gt;V_{TN}+\textbar{V_{TP}\textbar}\)</span>(大于二者的开启电压)</p>
+<p><strong>若V1=VDD时</strong>,下面那个<span class="arithmatex">\(NMOS\)</span>的是<span class="arithmatex">\(TN\)</span>,<span class="arithmatex">\(NMOS\)</span>是源极和漏极为<span class="arithmatex">\(N\)</span>掺杂,且此时栅极电压为<span class="arithmatex">\(V_{GS}\)</span>,当<span class="arithmatex">\(V_G&gt;V_T\)</span>的时候导通,会产生电流(注意此时<span class="arithmatex">\(V_S = 0v\)</span>)</p>
+<div class="arithmatex">\[v_O=V_{OL}\approx0V\]</div>
+<p>此时的增强型PMOS管因为<span class="arithmatex">\(V_{GS}=0v\)</span>,所以截止</p>
+<p><strong>若V1=0v时</strong>,<span class="arithmatex">\(PMOS\)</span>是<span class="arithmatex">\(TP\)</span>,此时是源极和漏极为<span class="arithmatex">\(P\)</span>掺杂,此时栅极电压为<span class="arithmatex">\(V_G\)</span>,在<span class="arithmatex">\(V_{GS}&lt;-V_T\)</span>的时候导通(注意这个<span class="arithmatex">\(-V_T\)</span>,在他自己这里也是一个<span class="arithmatex">\(V_T\)</span>)所以在<span class="arithmatex">\(V_1 = 0v\)</span>的时候<span class="arithmatex">\(TN\)</span>截止但是<span class="arithmatex">\(TP\)</span>导通,(注意此时<span class="arithmatex">\(V_S= V_{DD}\)</span>),此时</p>
+<div class="arithmatex">\[v_O=V_{OH}\approx V_{DD}\]</div>
+<p>当然下面的NMOS管就因为<span class="arithmatex">\(v_{gs}=0v\)</span>而截止</p>
+<p><img alt="alt text" src="../image-23.png" width="50%" /></p>
+<hr />
+<p>CMOS与非门</p>
+<p><img alt="alt text" src="../image-24.png" width="50%" /></p>
+<ul>
+<li>当输入都为高电平时TN1,TN2导通,TP1,TP2截止,输出低电平</li>
+<li>当输入有一个(或全部)为低电平时,TN中有一只(或全部)截止,TP1中有一只(或全部)导通,输出高电平</li>
+</ul>
+<blockquote>
+<p>NMOS串联，PMOS并联，构成与关系</p>
+</blockquote>
+<hr />
+<p>CMOS或非门</p>
+<p><img alt="alt text" src="../image-25.png" width="50%" /></p>
+<p>原理类似,NMOS并联,PMOS串联,构成或关系</p>
+<hr />
+<p>性能指标:CMOS门电路的指标参数和TTL类似,不同的是具体数值</p>
+<ol>
+<li>与TTL门电路相比,CMOS门电路的电源范围更广,通常为3~18V</li>
+<li>与TTL门电路相比，CMOS门输出高电平为VDD,输出低电平为0V，噪声容限高，抗干扰能力强
+<img alt="alt text" src="../image-29.png" width="50%" /></li>
+<li>由于MOS管的输入电流≈0,所以CMOS门电路的扇出系数极大,大于4000</li>
+<li>CMOS门由于互补两管中总有一只导电,另一管截止，因此CMOS门电路的功耗极微</li>
+</ol>
+<p>输入端特性</p>
+<ol>
+<li>CMOS门电路的输入端不能悬空</li>
+<li>CMOS门电路输入端接电阻相当于接低电平
+    电阻R上没有电压，所以输入电压为0， 相当于输入端直接接地</li>
+</ol>
+<p><img alt="alt text" src="../image-26.png" width="50%" /></p>
+<hr />
+<p>CMOS门端丽除了推拉式,漏极开路(OD门),三态门之外，还有一种传输门结构</p>
+<p><img alt="alt text" src="../image-27.png" /></p>
+<p>它由NMOS和PMOS管并联而成,输入电压vI的范围为0～VDD之间.</p>
+<p><img alt="alt text" src="../image-28.png" /></p>
+<p>相当于是一个可控的控制开关,用一个倒三角表示是一个三态输出形式</p>
+<p>约定场效应管的工作电源还是5v</p>
+<hr />
+<details class="note 例题">
+<summary>Note</summary>
+<p><img alt="alt text" src="../image-30.png" /></p>
+</details>
+<details class="note 例题">
+<summary>Note</summary>
+<p><img alt="alt text" src="../image-31.png" /></p>
+</details>
+<hr />
+<h2 id="锁存器和触发器">锁存器和触发器<a class="headerlink" href="#锁存器和触发器" title="Permanent link"></a></h2>
+<p>这两个是基本记忆单元电路,能为后面的组合电路和时序电路打下基础</p>
+<hr />
+<p><strong>锁存器</strong>:基本RS锁存器</p>
+<blockquote>
+<p>Q和Q非相互交叉连接,所以两者一定为互补输出</p>
+</blockquote>
+<p>与非门组成的RS触发器:</p>
+<p><img alt="alt text" src="../image-32.png" width="50%" /></p>
+<p><img alt="alt text" src="../image-33.png" width="50%" /></p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(\overline{R}\)</span></th>
+<th>\overline{S}</th>
+<th>Q</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>保持</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>禁用</td>
+</tr>
+</tbody>
+</table>
+<p>RS锁存器是在上升沿触发
+<img alt="alt text" src="../image-34.png" width="50%" /></p>
+<blockquote>
+<p>基本RS锁存器除用与非门实现以外,还可以用或非门和与-或-非逻辑门电路实现</p>
+</blockquote>
+<p><img alt="alt text" src="../image-35.png" /></p>
+<blockquote>
+<p>不同的RS锁存器的真值表不同</p>
+</blockquote>
+<hr />
+<p>RS锁存器小总结:</p>
+<ol>
+<li>S和R不能同时作用(约束条件)</li>
+<li>Q和<span class="arithmatex">\(\overline{Q}\)</span>总是互补</li>
+<li>输出只有两个稳定的状态,因此具有记忆功能</li>
+<li>从一个温台到另外一个稳态,需要输入端加上输入信号激励,S作用时,Q=1;R作用时,Q=0;S,R都不作用时,Q维持不变</li>
+<li>输入信号直接触发(也称为异步触发)</li>
+</ol>
+<p>RS锁存器可以实现无弹跳开关</p>
+<p><img alt="alt text" src="../image-36.png" width="50%" /></p>
+<hr />
+<p>同步锁存器</p>
+<blockquote>
+<p>基本RS触发器有直接置“0”和置“1”和状态“保持”功能，但没有时钟控制，因此不能实现多同类锁存器同步工作，而且抗干扰能力差等</p>
+</blockquote>
+<p>在时序逻辑电路中，一般要求用一个统一的时钟(CP, Clock Pulse)信号来协调整个电路的工作</p>
+<p>带时钟的锁存器称为同步锁存器、或门控锁存器.同步锁存器只有在时钟信号的作用下，电路的输出状态才有可能翻转；没有时钟信号作用时，电路的输出状态就不变。</p>
+<hr />
+<p><strong>同步RS锁存器</strong>:</p>
+<p>在基本RS锁存器的基础上增加了两个与非门</p>
+<p><img alt="alt text" src="../image-37.png" width="50%" /></p>
+<p>在CP作用之前触发器的状态是现态,初始态,记作<span class="arithmatex">\(Q_n\)</span>,在CP作用后触发态变为次态,记作<span class="arithmatex">\(Q_{n+1}\)</span></p>
+<p>当CP=0的时候,触发器保持不变,被封锁</p>
+<p>当CP=1的时候输出端的状态由RS和Q决定</p>
+<p><img alt="alt text" src="../image-38.png" width="50%" /></p>
+<p>这里RD和SD相当于是传统的RS锁存器,而CP是时钟信号,控制RS这两个的输入,使得能够成为同步锁存器</p>
+<p>特性方程</p>
+<div class="arithmatex">\[Q^{n+1}=S+Q^n\overline{R}\]</div>
+<p>约束条件:<span class="arithmatex">\(<span class="arithmatex">\(RS=0\)</span>\)</span></p>
+<p><img alt="alt text" src="../image-39.png" width="50%" /></p>
+<p>转移规律:</p>
+<ol>
+<li>转移到新的状态,需要激励信号<ol>
+<li>置位S=1,R=0 Q=1</li>
+<li>复位S=0,R=1 Q=0</li>
+</ol>
+</li>
+<li>保持原有状态,要求没有相反的激励信号<ol>
+<li>保持0,没有置位信号即可(S=0),所以此时R=1,S=1</li>
+<li>保持1,没有复位信号即可(R=0),所以此时S=1,R=1</li>
+</ol>
+</li>
+</ol>
+<hr />
+<p><strong>D锁存器</strong>:</p>
+<p>在RS锁存器的基础上增加一个反相器,就成为D锁存器</p>
+<p><img alt="alt text" src="../image-40.png" width="50%" /></p>
+<p>特性方程</p>
+<div class="arithmatex">\[Q^{n+1}=S+Q^n\overline{R}=D+Q^n\overline{\overline{D}}=D\]</div>
+<p>说明D锁存器的次态和输入端状态相同,CP为高电平时</p>
+<p><img alt="alt text" src="../image-41.png" width="50%" />
+<img alt="alt text" src="../image-42.png" width="50%" /></p>
+<hr />
+<p>D触发器的真值表如下</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(D\)</span></th>
+<th><span class="arithmatex">\(Q^{n+1}\)</span></th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>置0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>置1</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="alt text" src="../image-43.png" /></p>
+<details class="warning">
+<summary>如何提高抗干扰能力</summary>
+<p>在时钟脉冲CP高电平期间,外界的干扰信号会影响输入端RS或D端的状态,使锁存器的状态发生变化.这说明同步锁存器抗干扰能力较差</p>
+<details class="note">
+<summary>解决</summary>
+<p>边沿触发器只有在CP脉冲的上升沿或下降沿时接收信号，并完成翻转，而与此时刻前后的输入状态无关。所以，边沿触发器响应输入信号的时间极短，电路的可靠性高，抗干扰能力强。目前的集成触发器芯片一般都采用边沿触发方式。</p>
+</details>
+</details>
+<hr />
+<p><strong>边沿触发的RS触发器</strong>:</p>
+<p>在RS锁存器的同步脉冲输入端上,增加了一个脉冲边沿检测电路,使同步脉冲的宽度变窄.</p>
+<p><img alt="alt text" src="../image-44.png" width="50%" />
+脉冲边沿检测电路
+<img alt="alt text" src="../image-45.png" width="30%" /></p>
+<p><strong>主从型D触发器</strong>:</p>
+<blockquote>
+<p>两个D锁存器受同一个时钟脉冲CP触发,其翻转特点是分为接收和翻转两个节拍动作</p>
+</blockquote>
+<p><img alt="alt text" src="../image-46.png" width="50%" /></p>
+<p>关键在从触发器对CP的取反</p>
+<p><img alt="alt text" src="../image-47.png" width="50%" /></p>
+<hr />
+<p><strong>维持阻塞型触发器</strong>:</p>
+<p>维持阻塞型触发器简称维阻触发器，通常是<strong>上升沿(正边沿</strong>)触发</p>
+<p>维阻D触发器由六个与非门组成,能实现边沿触发的主要原因是电路中的四条反馈线</p>
+<p><img alt="alt text" src="../image-48.png" width="50%" /></p>
+<p>CP=0时,由于G3,G4门封锁,G1和G2构成基本RS触发器,因此输出状态不变
+<img alt="alt text" src="../image-49.png" width="50%" />
+在CP上升沿(CP由0变化到1)时,触发器输出按D信号翻转
+<img alt="alt text" src="../image-50.png" width="50%" />
+在CP=1期间,由于维持和阻塞作用,触发器状态不会改变
+<img alt="alt text" src="../image-51.png" width="50%" /></p>
+<p><img alt="alt text" src="../image-52.png" width="50%" /></p>
+<details class="note d锁存器vsd触发器">
+<summary>Note</summary>
+<p><img alt="alt text" src="../image-53.png" /></p>
+</details>
+<details class="note 注意分辨上升沿触发和下降沿出发">
+<summary>Note</summary>
+<p><img alt="alt text" src="../image-54.png" /></p>
+</details>
+<hr />
+<p><strong>下降沿JK触发器</strong>:</p>
+<p>该电路在CP脉冲下降沿期间接收JK信号并完成状态翻转，靠的是内部门电路延时时间差而实现的.与或非门G1,G2的传输延时比G3,G4与非门短</p>
+<p><img alt="alt text" src="../image-55.png" width="50%" /></p>
+<p>触发方程</p>
+<div class="arithmatex">\[Q^{n+1}=J\overline{Q^n}+\overline{K}Q^n\]</div>
+<p><img alt="alt text" src="../image-56.png" width="50%" /></p>
+<p>JK触发器具备有保持,置0,置1,翻转4种功能,是一个全功能触发器</p>
+<p><img alt="alt text" src="../image-57.png" width="50%" /></p>
+<hr />
+<p><strong>翻转触发器</strong>:</p>
+<p>T'触发器:即每加一个触发脉冲CP,触发器状态应翻转一次,因此又称为翻转触发器
+或计数触发器</p>
+<p><img alt="alt text" src="../image-58.png" width="50%" />
+由RS触发器改接而成
+<img alt="alt text" src="../image-59.png" width="50%" />
+由D触发器改接而成
+<img alt="alt text" src="../image-60.png" width="50%" />
+由JK触发器改接而成
+<img alt="alt text" src="../image-61.png" width="50%" /></p>
+<p>T触发器:是一种可控的计数型触发器</p>
+<p>当T＝1时,每来一个时钟脉冲CP,触发器状态翻转一次;当T=0时,触发器的状态保持不变</p>
+<p><img alt="alt text" src="../image-62.png" width="50%" /></p>
+<table>
+<thead>
+<tr>
+<th>T</th>
+<th><span class="arithmatex">\(Q^{n+1}\)</span></th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><span class="arithmatex">\(Q^n\)</span></td>
+<td>保持</td>
+</tr>
+<tr>
+<td>1</td>
+<td><span class="arithmatex">\(\overline{Q^{n}}\)</span></td>
+<td>翻转</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="alt text" src="../image-63.png" /></p>
+<hr />
+<p><img alt="alt text" src="../image-64.png" /></p>
+<hr />
+<h2 id="定时器">定时器<a class="headerlink" href="#定时器" title="Permanent link"></a></h2>
+<p><strong>单稳态触发器</strong>:只有一个稳定状态,每当他接收触发信号之后便在输出端产生一个固定脉冲宽度的单买抽,成为暂稳态,然后回到稳定态</p>
+<p><img alt="alt text" src="../image-65.png" width="50%" /></p>
+<p><img alt="alt text" src="../image-66.png" width="50%" /></p>
+<p>单稳态触发器的暂稳态脉冲宽带是通常由外接RC定时元件确定.</p>
+<ul>
+<li>不可重触发单稳态触发器：输出状态处于暂稳态过程中不响应任何再次触发，即单稳态触发器忽略暂稳态过程中的任何触发信号</li>
+<li>可重触发单稳态触发器：输出状态处于暂稳态过程中也能够被再次触发，重新从零开始计时。重触发的结果是输出脉冲被展宽</li>
+</ul>
+<p><img alt="alt text" src="../image-67.png" width="50%" /></p>
+<hr />
+<p><strong>无稳态触发器</strong>:无稳态触发器也称为多谐振荡器，电路输出没有稳态，只有2个暂稳态，暂稳态持续时间（即高低电平宽度）由外接定时元件RC决定</p>
+<p>无稳态触发器可由<strong>施密特触发器</strong>通过外接RC元件实现</p>
+<details class="note">
+<summary>施密特触发器</summary>
+<p><img alt="alt text" src="../image-68.png" /></p>
+<p>电压特性如下</p>
+<p><img alt="alt text" src="../image-69.png" /></p>
+<ol>
+<li>当输入电压Vin由小增大到上限电压VTH时,输出电压从高电平跳变到低电平</li>
+<li>当输入电压Vin由大减小到下限电压VTL时,输出电压才从低电平跳变到高电平</li>
+</ol>
+</details>
+<p>回差电压:VTH-VTL,反映了抗干扰能力</p>
+<p>由施密特触发器构成的无稳态触发器:</p>
+<ol>
+<li>电源刚刚合上的时候:电容尚未充电.施密特触发器输入为0,输出为1;输出端通过电阻R对电容C充电</li>
+<li>电容充电:当Vin上升到VTH时,施密特触发器输出由1翻转到0;电容C的电压通过电阻R放电</li>
+<li>电容放电：当Vin下降到VTL时，施密特触发器输出又跳变到1；电容C再次充电，不断repeat</li>
+</ol>
+<p><img alt="alt text" src="../image-70.png" width="50%" /></p>
+<hr />
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-01-08T10:30:12+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-08</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2025-01-08T10:30:12+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-08</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+<h2 id="__comments">Comments</h2>
+<!-- Insert generated snippet here -->
+<script src="https://giscus.app/client.js"
+        data-repo="IIIILing/discussion"
+        data-repo-id="R_kgDOMHyEYg"
+        data-category="General"
+        data-category-id="DIC_kwDOMHyEYs4CgAL6"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color ===  "object") {
+        var theme = palette.color.scheme ===  "slate"
+            ? "transparent_dark"
+            : "light"
+
+        // Instruct Giscus to set theme
+        giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color ===  "object") {
+                var theme = palette.color.scheme ===  "slate"
+                    ? "transparent_dark"
+                    : "light"
+
+                // Instruct Giscus to change theme
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/iiiiling" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["search.suggest", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide", "announce.dismiss", "instant", "code-annotations", "code-copy"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../../../../../js/timeago.min.js"></script>
+      
+        <script src="../../../../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+        <script src="../../../../../assets/javascripts/katex.js"></script>
+      
+        <script src="../../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
