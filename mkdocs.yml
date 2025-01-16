@@ -199,6 +199,7 @@ nav:
         - 理论考错题: CS/C/error.md
     - 工具:
       - Markdown: Tool/markdown.md
+      - Git: Tool/git/remove_remote_history.md
       - MkDocs: 
         - 如何配置MkDocs: Tool/Mkdocs/build_record.md
         - 内置markdown适用的css扩展 : Tool/Mkdocs/Material/css.md
