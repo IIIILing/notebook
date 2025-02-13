@@ -159,6 +159,7 @@ $$C_i = A_iB_i$$
 | 1 | 1 | 1    | 1 | 1  |
 
 $$S_i = A_i\oplus B_i \oplus C_{i-1}$$
+
 $$C_i = (A_i B_i)+( A_i\oplus B_i)C_{i-1}$$
 
 两个半加器和一个或门实现的全加器电路

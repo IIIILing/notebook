@@ -1,0 +1,18 @@
+{
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "absolute",
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "./attachments",
+  "uriCallbacks": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "useMarkdownLinks": true,
+  "trashOption": "system",
+  "promptDelete": false,
+  "newFileLocation": "current"
+}

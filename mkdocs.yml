@@ -2,7 +2,7 @@ site_name: Notebook
 
 theme:
   name: material
-  font: false 
+  font: false
   custom_dir: material/overrides #主要是这一行，指定了主题的配置文件夹
   palette: 
     - media: "(prefers-color-scheme: light)"
@@ -173,9 +173,6 @@ extra_javascript:
   # - https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js  #gitalk支持
 
 extra_css:
-  - stylesheets/extra.css
-  - https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css
-  - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
   - https://unpkg.com/katex@0/dist/katex.min.css
   - https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css # font-awesome表情支持
 
@@ -185,10 +182,25 @@ nav:
     - Notebook介绍:
       - index.md 
       - Todolist.md
-      - EE/main.md
 
-  - 外语学习:
-    - German: Language/Germany.md
+  - 课程学习:
+    - CS61A:
+      - 绪论: Course/CS61A/main.md
+      - Lab记录: Course/CS61A/lab.md
+      - Homework记录: Course/CS61A/hw.md
+      - 上课笔记: 
+        - 表达式: Course/CS61A/Note/expression.md
+        - 列表和递归: Course/CS61A/Note/list.md
+        - 迭代器: Course/CS61A/Note/iterator.md
+        - 生成器: Course/CS61A/Note/generator.md
+        - 面向对象编程: Course/CS61A/Note/oop.md
+        - 链表: Course/CS61A/Note/Link_list.md
+        - 可变树: Course/CS61A/Note/mutable_tree.md
+        - 模块化设计: Course/CS61A/Note/Modular.md
+        - 复杂度: Course/CS61A/Note/efficiency.md
+        - scheme: Course/CS61A/Note/scheme.md
+        - 解释器: Course/CS61A/Note/interpreter.md
+        - SQL: Course/CS61A/Note/SQL.md
   - 计算机基础:
     - CS/index.md
     - 编程语言:
@@ -197,18 +209,30 @@ nav:
         - CS/C/字符串.md
         - CS/C/文件.md
         - 理论考错题: CS/C/error.md
+      - Python:
+        - 基础语法: CS/Python/basic.md
+        - 正则表达式: CS/Python/Regex.md
+    - Web开发:
+      - HTTP:
+        - web基础: CS/HTTP/web_base.md
+        - 简单HTTP协议: CS/HTTP/simple_http.md
+        - HTTP状态码: CS/HTTP/HTTP_status.md
+        - HTTP报文内容: CS/HTTP/HTTP_content.md
+        - HTTP首部: CS/HTTP/HTTP_header.md
+        - web服务器: CS/HTTP/web_server.md
+        - 确保web安全的HTTPS: CS/HTTP/HTTPS.md
     - 工具:
       - Markdown: Tool/markdown.md
+      - Typst: Tool/Typst/begin.md
       - Git: Tool/git/remove_remote_history.md
       - MkDocs: 
-        - 如何配置MkDocs: Tool/Mkdocs/build_record.md
         - 内置markdown适用的css扩展 : Tool/Mkdocs/Material/css.md
   - 电气专业基础课:
     - EE/index.md
     - 电路电子技术1:
       - 数电: 
         - 器件基础: EE/EE1/Digital/Devices/Digitalcircuit.md
-        - 逻辑基础: EE/EEl/Digital/Logic/Logic.md
+        - 逻辑基础: EE/EE1/Digital/Logic/Logic.md
         - 基础逻辑电路: EE/EE1/Digital/Basiclogiccircuit/Basiclogiccircuit.md
         - 基本组合电路: EE/EE1/Digital/Basiccombinationcircuit/Basiccombinationcircuit.md
         - 时序逻辑电路: EE/EE1/Digital/Times/times.md
@@ -218,10 +242,7 @@ nav:
     - 电路电子技术2:
       - 模电资料汇总: EE/Electricfundamental/Analogcircuit/Source.md
     - 电路电子技术实验:
-      - 电路实验:
-        - EE/Experiment1/Currentcircuit.md
-      - 数电实验:
-        - EE/Experiment1/Digitalcircuit.md
+      - EE/Experiment1/main.md
   - 狱中往事:
     - History/Suzi.md
     - History/Haike.md

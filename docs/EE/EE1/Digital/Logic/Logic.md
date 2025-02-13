@@ -218,7 +218,7 @@ $$(A+B)(A+C)=AB+AA+AC+BC=A(A+B+C)+BC=A+BC$$
 ??? note "例题2:配项法"
     ![alt text](image-16.png)
 
-!!! warning "注意"
+!
     $$\overline{A}\overline{B}\overline{C} \neq \overline{ABC}$$
 
 >代数法化简需要一定的技巧以及对逻辑代数的熟练应用，无固定步骤可遵循，具有一定的试探性。对最后的化简结果，有时难以肯定是合理的。

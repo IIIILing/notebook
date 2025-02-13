@@ -139,11 +139,13 @@ TTL门电路的低电平灌电流远大于高电平拉电流.即：IOL>>IOH,所�
 省去T6和T4，集电极悬空，必须外接电阻(称为上拉电阻).**输出高电平为VCC1**,而不是3.6V
 
 OC门符号:
+
 ![alt text](image-15.png)
 
 虽然也是表示与非,但是有不同的特点:
 
 1. 实现线与:多个OC门的输出端可直接相连,称为线与
+
     ![alt text](image-16.png)
 2. 实现逻辑电平转换:OC门外接电源VCC1可以与门电路电源VCC一致,也可不同.当VCC1不同于VCC时,则输出高电平值得以改变,从而实现逻辑电平的转换
 
@@ -428,10 +430,15 @@ $D$ | $Q^{n+1}$ | 说明
 ![alt text](image-48.png){width=50%}
 
 CP=0时,由于G3,G4门封锁,G1和G2构成基本RS触发器,因此输出状态不变
+
 ![alt text](image-49.png){width=50%}
+
 在CP上升沿(CP由0变化到1)时,触发器输出按D信号翻转
+
 ![alt text](image-50.png){width=50%}
+
 在CP=1期间,由于维持和阻塞作用,触发器状态不会改变
+
 ![alt text](image-51.png){width=50%}
 
 ![alt text](image-52.png){width=50%}
@@ -468,11 +475,17 @@ T'触发器:即每加一个触发脉冲CP,触发器状态应翻转一次,因此�
 或计数触发器
 
 ![alt text](image-58.png){width=50%}
+
 由RS触发器改接而成
+
 ![alt text](image-59.png){width=50%}
+
 由D触发器改接而成
+
 ![alt text](image-60.png){width=50%}
+
 由JK触发器改接而成
+
 ![alt text](image-61.png){width=50%}
 
 T触发器:是一种可控的计数型触发器
@@ -481,10 +494,10 @@ T触发器:是一种可控的计数型触发器
 
 ![alt text](image-62.png){width=50%}
 
-T | $Q^{n+1}$ | 说明
+T | Qn+1 | 说明
 ---|---|---
-0 | $Q^n$ | 保持
-1 | $\overline{Q^{n}}$ | 翻转
+0 | Qn | 保持
+1 | not Qn | 翻转
 
 ![alt text](image-63.png)
 
