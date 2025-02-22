@@ -229,6 +229,8 @@ nav:
         - 内置markdown适用的css扩展 : Tool/Mkdocs/Material/css.md
   - 电气专业基础课:
     - EE/index.md
+    - 计算方法:
+      - 绪论: EE/cm/main.md
     - 电路电子技术1:
       - 数电: 
         - 器件基础: EE/EE1/Digital/Devices/Digitalcircuit.md
