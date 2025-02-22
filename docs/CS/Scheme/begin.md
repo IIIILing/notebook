@@ -27,6 +27,24 @@ sudo apt-get install mit-scheme
 
 之后输入`mit-scheme`即可进入scheme的交互式环境
 
+## 在CS61A中使用Scheme完成作业
+
+61A的scheme解释器包含在scheme作业中,在终端中键入`python scheme`启动
+
+要加载f.scm的Scheme文件,可以键入`python scheme -i f.scm`
+
+要退出解释器,可以键入`(exit)`
+
+### scheme编辑器
+
+所有的scheme作业都是基于一个web编辑器可以轻松运行OK测试和可视化环境
+
+在终端键入`python editor`即可启动编辑器
+
+用`ctrl+c`退出
+
+![alt text](image.png)
+
 ## 将Scheme用作计算器
 
 ```scheme
@@ -107,16 +125,144 @@ sin,cos,tan都可以正常使用
 (expt a b) ;→ a^b
 ```
 
-## 生成表
+## 函数
 
-表在递归函数和高阶函数中扮演着重要的角色
-
-### Cons单元和表
-
-Cons单元室一个存放了两个地址的内存空间,Cons单元可以用函数cons生成
-
-在前端输入`(cons 1 2)`
+`define`用于定义函数
 
 ```scheme
-;Value: (1 . 2)
+(define (square x) (* x x))
 ```
+
+```scheme
+(define pi (+ 3 0.14159))
+(define radius 10)
+```
+
+`if`语句
+
+```scheme
+(if <predicate> <if-true> <if-false>)
+```
+
+```scheme
+(if (> 10 20) 20 10)
+```
+
+>Python if 语句的套件中可以添加更多代码行，而 Scheme if 表达式在 `<if-true>` 和 `<if-false>` 位置中的每个位置都只需要一个表达式
+
+`cond`语句
+
+```scheme
+(cond
+  (<p1> <e1>)
+  (<p2> <e2>)
+  ...
+  (<pn> <en>)
+  (else <e>))
+```
+
+`cond`语句会逐个检查每个谓词，直到找到一个为真的谓词。一旦找到一个为真的谓词，`cond`会求出对应的表达式，并返回这个表达式的值。
+
+```scheme
+(define (abs x)
+  (cond ((> x 0) x)
+        ((= x 0) 0)
+        ((< x 0) (- x))))
+```
+
+`lambda`表达式
+
+```scheme
+(lambda (<formal-parameters>) <body>)
+```
+
+```scheme
+(define (square x) (* x x))
+(define square (lambda (x) (* x x)))
+```
+
+`lambda`表达式是一个匿名函数，它没有名字.创建并且返回具有给定形式参数和体的函数
+
+和python中的lamda类似
+
+```scheme
+((lambda (x) (* x x)) 3)
+```
+
+得到的是
+
+```scheme
+;Value: 9
+```
+
+`lambda`中还可以包含多个表达式,并且scheme过程返回其主体的最后一个表达式的值
+
+`define`还可以创建一个过程,并且为其命名
+
+```scheme
+(define (<symbol> <formal-parameters>) <body>)
+(define (f x y) (+ x y))
+```
+
+总而言之我们在scheme中可以定义函数,并且使用`define`,需要给定的参数和主体
+
+```scheme
+scm> (define add (lambda (x y) (+ x y)))
+add
+scm> (define (add x y) (+ x y))
+add
+```
+
+以上等效
+
+## scheme的作业
+
+```scheme
+(define (over-or-under num1 num2)
+    (cond
+        ((< num1 num2)-1)
+        ((= num1 num2) 0)
+        (else 1)
+    )
+)
+(define (make-adder num)
+    (lambda (x) (+ x num))
+)
+    
+(define (composed f g)
+  (lambda (x) (f (g x)))
+)
+
+(define (repeat f n) 
+  (if (< n 1)
+    (lambda (x) x)
+    (composed f (repeat f (- n 1))))
+)
+
+(define (max a b)
+  (if (> a b)
+      a
+      b))
+
+(define (min a b)
+  (if (> a b)
+      b
+      a))
+(define (gcd a b)
+  (cond ((zero? a) b)
+        ((zero? b) a)
+        ((= (modulo (max a b) (min a b)) 0) (min a b))
+        (else (gcd (min a b) (modulo (max a b) (min a b))))))
+```
+
+modulo函数的作用是求余数
+
+```scheme
+(modulo 10 3) ;→ 1
+```
+
+所以max(a,b)和min(a,b)的余数是0,那么最小的数就是最大数的最大公约数
+
+如果max(a,b)和min(a,b)的余数不是0,那么就用min(a,b)和余数继续求最大公约数(求最大公约数的过程就是辗转相除法)
+
+如果a和b中有一个是0,那么另一个就是最大公约数

@@ -1,11 +1,11 @@
 {
   "cssTheme": "Border",
-  "accentColor": "#1f95ef",
+  "accentColor": "#1c83e3",
   "textFontFamily": "Constantia,楷体",
   "interfaceFontFamily": "Constantia,Cascadia Code",
   "monospaceFontFamily": "Cascadia Mono",
   "baseFontSize": 20,
   "baseFontSizeAction": false,
-  "theme": "moonstone",
+  "theme": "obsidian",
   "nativeMenus": false
 }
