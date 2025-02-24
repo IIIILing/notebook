@@ -12,4 +12,3 @@ title: 计算机基础知识
     - 汇编语言
 
 [scheme教程中文版](https://deathking.github.io/yast-cn/)
-

@@ -127,7 +127,7 @@ $$\sqrt{20}=10\times0.44...$$
 
 所以,a1=4,所以
 
-$$\varepsilon = \frac{1}{2\times 4}\times 10^{-n+1}=\frac{1}{8}\times 10^{-n+1}\leq 0.1%$$
+$$\varepsilon = \frac{1}{2\times 4}\times 10^{-n+1}=\frac{1}{8}\times 10^{-n+1}\leq 0.1$$
 
 所以
 
