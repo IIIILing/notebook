@@ -131,7 +131,7 @@ $$\varepsilon = \frac{1}{2\times 4}\times 10^{-n+1}=\frac{1}{8}\times 10^{-n+1}\
 
 所以
 
-$$10\times 10^{-n} \leq 8 \times 10^{-3}$$
+$$$$10\times 10^{-n} \leq 8 \times 10^{-3}$$
 
 所以,取n=4,此时的相对误差小于0.1
 
