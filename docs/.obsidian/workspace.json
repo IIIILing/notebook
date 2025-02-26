@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "fd4999866a5fe2f9",
+        "id": "69591a9f84c875d8",
         "type": "tabs",
         "children": [
           {
-            "id": "951a2f6d3ebb2842",
+            "id": "c2f2fc3912250b68",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tool/git/remove_remote_history.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "remove_remote_history"
+              "title": "新标签页"
             }
           }
         ]
@@ -79,7 +74,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "8b9fcc5eacf6a125",
@@ -141,10 +137,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Course/CS61A/Expression.md"
+                "file": "EE/cm/week2.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Expression 的大纲"
+              "title": "week2 的大纲"
             }
           }
         ],
@@ -167,17 +166,26 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "951a2f6d3ebb2842",
+  "active": "c2f2fc3912250b68",
   "lastOpenFiles": [
-    "EE/Experiment1/main.md",
+    "EE/signal/连续信号.md",
     "EE/cm/main.md",
-    "EE/Matlab/basic.md",
     "EE/电网络实验/电网络实验1.md",
-    "Generaledu/经济法理论与实务/Class1.md",
-    "Generaledu/经济法理论与实务",
-    "Generaledu",
-    "EE/cm",
-    "EE/Matlab",
+    "EE/signal/attachments/Pasted image 20250226121426.png",
+    "EE/signal/attachments/Pasted image 20250226120906.png",
+    "EE/signal/attachments/Pasted image 20250226114753.png",
+    "EE/signal/attachments/Pasted image 20250226111442.png",
+    "EE/signal/attachments/Pasted image 20250226104301.png",
+    "EE/signal/attachments/Pasted image 20250226104235.png",
+    "EE/signal/attachments/Pasted image 20250226103155.png",
+    "EE/signal/attachments",
+    "EE/cm/week2.md",
+    "EE/signal",
+    "EE/cm/attachments/Pasted image 20250226090331.png",
+    "EE/cm/attachments/Pasted image 20250226084431.png",
+    "EE/cm/attachments/Pasted image 20250226081217.png",
+    "EE/cm/attachments",
+    "EE/cm/week1.md",
     "Course/CS61A/Note/Exception.md",
     "EE/电网络实验",
     "Course/CS61A/Note/scheme.md",
@@ -185,25 +193,15 @@
     "Course/CS61A/Note/SQL.md",
     "Course/CS61A/Note/oop.md",
     "Course/CS61A/Note/Modular.md",
-    "CS/Scheme/image.png",
     "EE/EE2",
-    "Course/CS61A/Note/attachments/Pasted image 20250210214723.png",
-    "Course/CS61A/Note/attachments/Pasted image 20250210214717.png",
     "Course/CS61A/Note/mutable_tree.md",
     "Course/CS61A/Note/expression.md",
     "Course/CS61A/Note/generator.md",
     "Course/CS61A/Note/Interpreters.md",
     "Course/CS61A/Note/iterator.md",
-    "Course/CS61A/Note/attachments/Pasted image 20250210211629.png",
-    "Course/CS61A/Note/attachments/Pasted image 20250210201022.png",
-    "Course/CS61A/Note/attachments/Pasted image 20250210201000.png",
     "未命名.canvas",
     "Course/CS61A/Note/list.md",
     "Course/CS61A/Note/Link_list.md",
-    "Course/CS61A/Note/attachments/image2.png",
-    "Course/CS61A/Note/image2.png",
-    "Course/CS61A/Note/image.png",
-    "Course/CS61A/Note/attachments/Pasted image 20250210123049.png",
     "Course/CS61A/lab.md",
     "Course/CS61A/hw.md",
     "Course/CS61A/main.md",
@@ -216,6 +214,7 @@
     "Course/CS61A/Note/attachments",
     "Course/CS61B",
     "Course/CS61A/Note",
+    "Course/CS61A/attachments",
     "未命名 1.canvas",
     "未命名 2.canvas",
     "未命名 7.canvas",
