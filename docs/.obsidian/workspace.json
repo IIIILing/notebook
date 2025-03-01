@@ -4,20 +4,56 @@
     "type": "split",
     "children": [
       {
-        "id": "69591a9f84c875d8",
+        "id": "ba4742fde53e4960",
         "type": "tabs",
         "children": [
           {
-            "id": "c2f2fc3912250b68",
+            "id": "78775d1b451a6d7d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "EE/EE2/二极管.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "二极管"
+            }
+          },
+          {
+            "id": "cb08080897c83912",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "EE/Experiment1/main.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "main"
+            }
+          },
+          {
+            "id": "e7932f7c9c7e3928",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "EE/Matlab/basic.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "basic"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -74,8 +110,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "8b9fcc5eacf6a125",
@@ -166,27 +201,33 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "c2f2fc3912250b68",
+  "active": "e7932f7c9c7e3928",
   "lastOpenFiles": [
-    "Generaledu/经济法理论与实务/Class2.md",
-    "EE/signal/attachments/Pasted image 20250226121426.png",
-    "EE/signal/attachments/Pasted image 20250226120906.png",
-    "EE/signal/attachments/Pasted image 20250226111442.png",
-    "EE/signal/attachments/Pasted image 20250226114753.png",
-    "EE/signal/attachments/Pasted image 20250226104301.png",
-    "EE/signal/attachments/Pasted image 20250226104235.png",
-    "EE/signal/attachments/Pasted image 20250226103155.png",
+    "EE/EE2/attachments/Pasted image 20250227121614.png",
+    "EE/EE2/attachments/Pasted image 20250227121215.png",
+    "EE/EE2/attachments/Pasted image 20250227120558.png",
+    "EE/EE2/attachments/Pasted image 20250227120840.png",
+    "EE/EE2/attachments/Pasted image 20250227120541.png",
+    "EE/EE2/attachments/Pasted image 20250227115903.png",
+    "EE/EE2/attachments/Pasted image 20250227115813.png",
+    "EE/EE2/attachments/Pasted image 20250227114937.png",
+    "EE/EE2/attachments/Pasted image 20250227115050.png",
+    "EE/EE2/attachments/Pasted image 20250227114636.png",
+    "EE/EE2/attachments/Pasted image 20250227114220.png",
+    "EE/EE2/二极管.md",
+    "EE/EE2/三极管.md",
+    "EE/EE2/attachments",
+    "EE/EE2",
+    "EE/index.md",
+    "EE/Experiment1/main.md",
+    "EE/电网络实验/电网络实验1.md",
+    "EE/cm/week1.md",
+    "EE/cm/week2.md",
+    "EE/Matlab/basic.md",
     "EE/signal/连续信号.md",
     "EE/signal/attachments",
     "EE/signal",
-    "EE/cm/week2.md",
-    "EE/cm/week1.md",
-    "EE/cm/attachments/Pasted image 20250226084431.png",
-    "EE/cm/attachments/Pasted image 20250226090331.png",
-    "EE/cm/attachments/Pasted image 20250226081217.png",
     "EE/cm/attachments",
-    "EE/cm/main.md",
-    "EE/电网络实验/电网络实验1.md",
     "Course/CS61A/Note/Exception.md",
     "EE/电网络实验",
     "Course/CS61A/Note/scheme.md",
@@ -194,7 +235,6 @@
     "Course/CS61A/Note/SQL.md",
     "Course/CS61A/Note/oop.md",
     "Course/CS61A/Note/Modular.md",
-    "EE/EE2",
     "Course/CS61A/Note/mutable_tree.md",
     "Course/CS61A/Note/expression.md",
     "Course/CS61A/Note/generator.md",
@@ -206,15 +246,9 @@
     "Course/CS61A/lab.md",
     "Course/CS61A/hw.md",
     "Course/CS61A/main.md",
-    "Course/CS61A/Note/composition.md",
-    "CS/Python/iterators.md",
-    "Course/CS61A/Note/iterators.md",
     "CS/Python/attachments",
-    "Course/CS61A/Note/chapter2.md",
     "Course/CS61A/Note/attachments",
     "Course/CS61B",
-    "Course/CS61A/Note",
-    "Course/CS61A/attachments",
     "未命名 1.canvas",
     "未命名 2.canvas",
     "未命名 7.canvas",

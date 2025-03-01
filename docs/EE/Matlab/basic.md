@@ -1,5 +1,6 @@
 ---
 title: matlab快速入门
+comments: true
 ---
 
 ## Matlab基础

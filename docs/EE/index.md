@@ -1,6 +1,7 @@
 ---
 title: 电气专业课笔记
-comments: True
+comments: true
+statistics: true
 ---
 
 !!! note "正在更新"

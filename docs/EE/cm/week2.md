@@ -3,7 +3,6 @@ title: 一元非线性方程
 tags:
   - 计算方法
 comments: true
-statistics: true
 ---
 
 	本章作业:1, 3, 5, 11(P159-160)
@@ -61,7 +60,7 @@ $$|x^*-x_k| = \frac{b-a}{2^{k+1}}< \varepsilon$$
 一般情况下,用上述的确定的k往往会偏大,程序中一般不用此式子来决定二区间的次数
 
 基本步骤如下图
-![](EE/cm/attachments/Pasted%20image%2020250224060232.png)
+![](attachments/Pasted%20image%2020250224060232.png)
 
 首先要求定连续,首尾单调和区间收尾异号,三个条件缺一不可
 
