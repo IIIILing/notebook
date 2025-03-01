@@ -246,8 +246,8 @@ nav:
     - 信号分析与处理:
       - 连续信号: EE/signal/连续信号.md
     - 电路电子技术2:
-      - 二极管: EE/EE2/二级管.md
-      - 三极管: EE/EE2/三极管.md
+      - 二极管: EE/EE2/erjiguan.md
+      - 三极管: EE/EE2/sanjiguan.md
 
     - 电路电子技术2:
       - 模电资料汇总: EE/Electricfundamental/Analogcircuit/Source.md
