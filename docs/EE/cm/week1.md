@@ -1,8 +1,8 @@
 ---
 title: 计算方法绪论
 comments: true
-tag: 计算方法
-statistics: True
+tags:
+  - 计算方法
 ---
 ## 数值计算的任务和特点
 

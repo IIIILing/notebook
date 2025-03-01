@@ -240,6 +240,14 @@ nav:
         - 时序逻辑电路: EE/EE1/Digital/Times/times.md
         - 集成逻辑电路: EE/EE1/Digital/Integration/integration.md
         - ROM/RAM: EE/EE1/Digital/ROM/ROM.md
+    - 计算方法:
+      - 绪论部分: EE/cm/week1.md
+      - 迭代法: EE/cm/week2.md
+    - 信号分析与处理:
+      - 连续信号: EE/signal/连续信号.md
+    - 电路电子技术2:
+      - 二极管: EE/EE2/二级管.md
+      - 三极管: EE/EE2/三极管.md
 
     - 电路电子技术2:
       - 模电资料汇总: EE/Electricfundamental/Analogcircuit/Source.md
