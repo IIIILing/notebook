@@ -240,17 +240,20 @@ nav:
         - 时序逻辑电路: EE/EE1/Digital/Times/times.md
         - 集成逻辑电路: EE/EE1/Digital/Integration/integration.md
         - ROM/RAM: EE/EE1/Digital/ROM/ROM.md
+    - 电网络分析:
+      - 网络函数: EE/Network/Networkfunction.md
     - 计算方法:
-      - 绪论部分: EE/cm/week1.md
-      - 迭代法: EE/cm/week2.md
+      - 绪论部分: EE/CM/week1.md
+      - 迭代法: EE/CM/week2.md
+      - 高斯消去: EE/CM/week3.md
+      - 插值拟合: EE/CM/week4.md
     - 信号分析与处理:
-      - 连续信号: EE/signal/连续信号.md
-    - 电路电子技术2:
-      - 二极管: EE/EE2/二级管.md
-      - 三极管: EE/EE2/三极管.md
+      - 连续信号: EE/Signal/连续信号.md
 
     - 电路电子技术2:
-      - 模电资料汇总: EE/Electricfundamental/Analogcircuit/Source.md
+      - 二极管: EE/EE2/二极管.md
+      - 三极管: EE/EE2/三极管.md
+      - 放大电路: EE/EE2/放大电路.md
     - 电路电子技术实验:
       - EE/Experiment1/main.md
 

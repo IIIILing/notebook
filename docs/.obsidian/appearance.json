@@ -6,6 +6,6 @@
   "monospaceFontFamily": "Cascadia Mono",
   "baseFontSize": 20,
   "baseFontSizeAction": false,
-  "theme": "obsidian",
+  "theme": "system",
   "nativeMenus": false
 }
