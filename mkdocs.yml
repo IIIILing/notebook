@@ -182,7 +182,6 @@ nav:
     - Notebook介绍:
       - index.md 
       - Todolist.md
-      - History/Suzi.md
 
   - 课程学习:
     - CS61A:
@@ -257,5 +256,6 @@ nav:
       - 放大电路: EE/EE2/放大电路.md
     - 电路电子技术实验:
       - EE/Experiment1/main.md
-
+  - 小故事:
+    - History/Suzi.md 
 
