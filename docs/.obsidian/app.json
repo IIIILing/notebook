@@ -14,5 +14,6 @@
   "useMarkdownLinks": true,
   "trashOption": "system",
   "promptDelete": false,
-  "newFileLocation": "current"
+  "newFileLocation": "current",
+  "openBehavior": "daily"
 }
