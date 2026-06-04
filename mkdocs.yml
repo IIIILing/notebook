@@ -135,33 +135,6 @@ markdown_extensions: #详见https://squidfunk.github.io/mkdocs-material/setup/ex
       permalink: "\ue157"
 
 
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format:
-            !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
-
-  - pymdownx.arithmatex: # latex支持
-      generic: true
-  - toc:
-      permalink: true # 固定标题位置为当前位置
-  - pymdownx.highlight: # 代码块高亮
-      anchor_linenums: true
-      linenums: true # 显示行号
-      auto_title: true # 显示编程语言名称
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  # - markdown.extensions.toc:
-  #     slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
-  #     permalink: "\ue157"
-
-
 extra_javascript:
 
   - javascripts/extra.js #自定义javascript
@@ -187,7 +160,7 @@ nav:
       - 绪论: Course/CS61A/main.md
       - Lab记录: Course/CS61A/lab.md
       - Homework记录: Course/CS61A/hw.md
-      - 上课笔记: 
+      - 上课笔记:
         - 表达式: Course/CS61A/Note/expression.md
         - 列表和递归: Course/CS61A/Note/list.md
         - 迭代器: Course/CS61A/Note/iterator.md
@@ -195,10 +168,9 @@ nav:
         - 面向对象编程: Course/CS61A/Note/oop.md
         - 链表: Course/CS61A/Note/Link_list.md
         - 可变树: Course/CS61A/Note/mutable_tree.md
-        - 模块化设计: Course/CS61A/Note/Modular.md
         - 复杂度: Course/CS61A/Note/efficiency.md
         - scheme: Course/CS61A/Note/scheme.md
-        - 解释器: Course/CS61A/Note/interpreter.md
+        - 解释器: Course/CS61A/Note/Interpreters.md
         - SQL: Course/CS61A/Note/SQL.md
   - 计算机基础:
     - CS/index.md
@@ -228,8 +200,6 @@ nav:
         - 内置markdown适用的css扩展 : Tool/Mkdocs/Material/css.md
   - 电气专业基础课:
     - EE/index.md
-    - 计算方法:
-      - 绪论: EE/cm/main.md
     - 电路电子技术1:
       - 数电: 
         - 器件基础: EE/EE1/Digital/Devices/Digitalcircuit.md
