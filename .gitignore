@@ -1,4 +1,6 @@
-mkdocs/
+# Python 虚拟环境（注意：不要命名为 "mkdocs"，否则会遮蔽真实的 mkdocs 包导致 `python -m mkdocs` 无法运行）
+mkdocs-venv/
+.venv-build/
 site/
 .cache/
 *.pyc
