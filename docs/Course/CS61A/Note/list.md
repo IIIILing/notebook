@@ -690,4 +690,4 @@ def leaves(tree):
 
 ### 迭代器
 
-[iterators](CS/Python/iterators.md)
+[iterators](iterator.md)

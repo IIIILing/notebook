@@ -21,7 +21,7 @@ HOST表示服务器的域名,会被DNS解析成ip地址
 这段话的意思是,请求访问某台HTTP服务器上的`/index.html`文件
 
 **请求报文是由请求方法,请求URI,版本协议,可选的请求首部字段和内容实体构成的**
-![](HTTP/attachments/Pasted%20image%2020250121190112.png)
+<!-- 图片缺失（原图未入库）: HTTP/attachments/Pasted%20image%2020250121190112.png -->
 接受到请求的服务器,会将内容的处理结果以相应报文的形式返回
 ```http
 HTTP/1.1 200 OK 
@@ -72,14 +72,14 @@ get方法用来请求已经被识别的URI的资源,如果请求的资源是文�
 POST方法用来传输实体的主体,POST 的主要目的并不是获取响应的主体内容
 
 把信息告诉服务器
-![](HTTP/attachments/Pasted%20image%2020250121195534.png)
+<!-- 图片缺失（原图未入库）: HTTP/attachments/Pasted%20image%2020250121195534.png -->
 #### PUT
 PUT 方法用来传输文件,要在报文主体中包含文件内容,并且保存在请求URI制定的位置上
 
 一般web不使用这个方法,因为HTTP自身的put不带验证机制,任何人都可以上传文件
 
 一般配合好web应用的验证机制,挥着用rest标准的同类方法会开放使用put方法
-![](HTTP/attachments/Pasted%20image%2020250121195747.png)
+<!-- 图片缺失（原图未入库）: HTTP/attachments/Pasted%20image%2020250121195747.png -->
 
 #### HEAD
 
@@ -110,7 +110,7 @@ CONNECT方法要求在与代理服务器通信时**建立隧道**，实现用隧
 
 主要使用**SSL**（Secure Sockets Layer，安全套接层）和**TLS**（Transport Layer Security，传输层安全）协议把通信内容加密后经网络隧道传输
 
-![](HTTP/attachments/Pasted%20image%2020250121200710.png)
+<!-- 图片缺失（原图未入库）: HTTP/attachments/Pasted%20image%2020250121200710.png -->
 
 
 
@@ -126,7 +126,7 @@ CONNECT方法要求在与代理服务器通信时**建立隧道**，实现用隧
 方法作用在于,可以制定请求的资源按照期望来产生某轴行为,方法中又GET,POST和HEAD
 
 另外，方法名区分大小写，注意要用**大写字母**
-![](HTTP/attachments/Pasted%20image%2020250121200906.png)
+<!-- 图片缺失（原图未入库）: HTTP/attachments/Pasted%20image%2020250121200906.png -->
 
 ## 持久连接节省信息量
 持久连接的特点是，*只要任意一端没有明确提出断开连接*，则保持TCP连接状态
@@ -143,10 +143,10 @@ CONNECT方法要求在与代理服务器通信时**建立隧道**，实现用隧
 
 这样就能够做到同时并行发送多个请求,而不需要一个一个等待了
 
-![](HTTP/attachments/Pasted%20image%2020250121201237.png)
+<!-- 图片缺失（原图未入库）: HTTP/attachments/Pasted%20image%2020250121201237.png -->
 
 以前是这样的
-![](HTTP/attachments/Pasted%20image%2020250121201252.png)
+<!-- 图片缺失（原图未入库）: HTTP/attachments/Pasted%20image%2020250121201252.png -->
 请求数越多，时间差就越明显
 ## cookie状态管理
 HTTP是无状态协议,它不对之前发生过的请求和响应的状态进行管理,也就是说无法根据之前的状态进行本次的请求管理

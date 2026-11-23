@@ -180,7 +180,7 @@ def double_eights(n):
             return double_eights(n // 10)
 ```
 
-[hw](Course/CS61A/hw.md#^similar)
+[hw](hw.md)
 
 ## lab04
 

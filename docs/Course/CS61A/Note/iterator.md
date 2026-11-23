@@ -109,7 +109,7 @@ RuntimeError: dictionary changed size during iteration
 ```
 
 另一方面,许多内置的python语句都会返回一个迭代器
-![](CS/Python/attachments/Pasted%20image%2020250207091335.png)
+![](../../../CS/Python/attachments/Pasted%20image%2020250207091335.png)
 
 ## 创建一个迭代器
 

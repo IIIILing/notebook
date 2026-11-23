@@ -50,7 +50,7 @@ HTTP协议也处于这一层
 
 接收端的服务器在链路层一般接受到数据,按照顺序网上发送,一直到应用层,算是服务器接收到客户端发送过来的HTTP请求了
 
-![](HTTP/attachments/Pasted%20image%2020250121182257.png)
+<!-- 图片缺失（原图未入库）: HTTP/attachments/Pasted%20image%2020250121182257.png -->
 ## TCP,IP,DNS协议
 这三个协议是TCP/IP协议族中和HTTP密不可分的三个协议
 ### IP
@@ -99,7 +99,7 @@ IP地址是一串纯数字,但是主机名和域名则一般是字母方便记�
 DNS服务就是把字母转化为纯数字的IP地址给计算机访问.或者逆向从IP地址反查域名的服务(从纯数字到字母)
 
 ## 各种协议和HTTP的关系
-![](HTTP/attachments/Pasted%20image%2020250121185157.png)
+<!-- 图片缺失（原图未入库）: HTTP/attachments/Pasted%20image%2020250121185157.png -->
 ## URI
 URI:统一资源标识符
 采用HTTP协议时，协议方案就是http。除此之外，还有ftp、 mailto、telnet、file 等。标准的 URI 协议方案有30种左右
@@ -110,7 +110,7 @@ URL就是web浏览器访问web页面时需要输入的网页地址
 URI 用字符串标识某一互联网资源，而URL表示资源的地点（互 联网上所处的位置）。可见URL是URI的子集
 
 ### 绝对URI格式
-![](HTTP/attachments/Pasted%20image%2020250121184840.png)
+<!-- 图片缺失（原图未入库）: HTTP/attachments/Pasted%20image%2020250121184840.png -->
 
 其中服务器地址有很多种,可以是类似`hackr.jp`这种`DNS`可解析的名称,或是`192.168.1.1`这类`IPv4`地址名,还可以是`[0:0:0:0:0:0:0:1]`这样用方括号括起来的IPv6地址名.
 

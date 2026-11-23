@@ -77,7 +77,7 @@ $$
 
 显然有$$P_n(x_i)=y_i$$
 其中$$l_i=\Pi\frac{x-x_j}{x_i-x_j}$$
-![](EE/cm/attachments/Pasted%20image%2020250312084828.png)
+![](attachments/Pasted%20image%2020250312084828.png)
 
 ---
 
